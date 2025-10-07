@@ -1,0 +1,6 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Proposal Strangers"
+
+[params]
+  description = "A Hugo site for Proposal Strangers"
