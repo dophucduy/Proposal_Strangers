@@ -1,10 +1,45 @@
 {{ define "main" }}
-<h1>Welcome to {{ .Site.Title }}</h1>
-<p>{{ .Site.Params.description }}</p>
-{{ range .Site.RegularPages }}
-    <article>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p>{{ .Summary }}</p>
-    </article>
-{{ end }}
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'JetBrains Mono', monospace; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); color: #c9d1d9; line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  .header { text-align: center; margin-bottom: 50px; padding: 40px 0; background: linear-gradient(45deg, #1f2937, #374151); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+  h1 { color: #58a6ff; font-size: 2.5rem; margin-bottom: 20px; text-shadow: 0 0 20px rgba(88, 166, 255, 0.3); }
+  h2 { color: #7c3aed; margin: 40px 0 20px; font-size: 1.8rem; border-left: 4px solid #7c3aed; padding-left: 15px; }
+  h3 { color: #f85149; margin: 30px 0 15px; }
+  .tech-badges { margin: 20px 0; }
+  .tech-badge { display: inline-block; background: linear-gradient(45deg, #238636, #2ea043); color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; margin: 5px; box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3); transition: transform 0.3s; }
+  .tech-badge:hover { transform: translateY(-2px); }
+  table { border-collapse: collapse; width: 100%; margin: 30px 0; background: #161b22; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+  th, td { border: 1px solid #30363d; padding: 15px; text-align: left; }
+  th { background: linear-gradient(45deg, #21262d, #30363d); color: #58a6ff; font-weight: bold; }
+  tr:hover { background: #21262d; }
+  code, pre { background: #161b22; padding: 15px; border-radius: 8px; color: #79c0ff; border-left: 4px solid #58a6ff; margin: 15px 0; display: block; overflow-x: auto; }
+  blockquote { background: #21262d; border-left: 4px solid #58a6ff; padding: 15px; margin: 20px 0; border-radius: 5px; }
+  .links { text-align: center; margin-top: 40px; }
+  .link-btn { display: inline-block; background: linear-gradient(45deg, #58a6ff, #7c3aed); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; margin: 10px; transition: all 0.3s; }
+  .link-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(88, 166, 255, 0.3); }
+</style>
+<div class="container">
+  <div class="header">
+    <h1>{{ .Title }}</h1>
+    <div class="tech-badges">
+      <span class="tech-badge">AWS</span>
+      <span class="tech-badge">Serverless</span>
+      <span class="tech-badge">Lambda</span>
+      <span class="tech-badge">DynamoDB</span>
+      <span class="tech-badge">S3</span>
+      <span class="tech-badge">API Gateway</span>
+    </div>
+    <div style="margin-top: 30px; font-size: 14px; color: #8b949e;">
+      <strong>Project Members:</strong><br>
+      Đỗ Phúc Duy • Phạm Thành Phúc • Trần Quang Hiếu • Trịnh Quốc Bảo<br>
+      Bùi Hồ Ngọc Hân • Nguyễn Thanh Tân • Lưu Vĩ Khánh
+    </div>
+  </div>
+  <div class="content" style="padding-left: 50px;">
+    {{ .Content }}
+  </div>
+</div>
 {{ end }}
