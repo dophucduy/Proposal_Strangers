@@ -21,8 +21,9 @@ The current Flyora application lacks:
 
 ## 🏗️ Solution Architecture
 
-```
 The proposed system adopts a serverless AWS architecture to host and manage a cloud-based web application integrated with GitHub for front-end hosting. The platform provides authenticated access for users, processes backend requests through API Gateway and AWS Lambda, and stores data securely in Amazon DynamoDB and Amazon S3.
+```
+
 S3 → Lambda → DynamoDB → API Gateway → Client
 ```
 
