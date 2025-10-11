@@ -22,9 +22,6 @@ The current Flyora application lacks:
 ## 🏗️ Solution Architecture
 
 The e-commerce platform is designed using a **serverless and event-driven AWS architecture**, ensuring scalability, security, and cost efficiency. The solution integrates both a web-based storefront and an intelligent chatbot assistant to enhance user interaction. The key AWS services work together to manage authentication, data storage, backend logic, and conversational AI.
-```
-
-```
 
 ### 🧩 AWS Services Used
 
@@ -40,7 +37,6 @@ The e-commerce platform is designed using a **serverless and event-driven AWS ar
 | **Amazon DynamoDB** | Serves as a NoSQL database storing users, products, and order records. |
 | **Amazon S3** | Stores static assets such as product images and CSV files. |
 | **Amazon Lex** | Powers the chatbot interface for natural language interaction. |
-
 ---
 
 ### 🧱 Component Design
