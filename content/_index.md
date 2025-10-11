@@ -21,12 +21,29 @@ The current Flyora application lacks:
 
 ## 🏗️ Solution Architecture
 
-The proposed system adopts a serverless AWS architecture to host and manage a cloud-based web application integrated with GitHub for front-end hosting. The platform provides authenticated access for users, processes backend requests through API Gateway and AWS Lambda, and stores data securely in Amazon DynamoDB and Amazon S3.
+The e-commerce platform is designed using a **serverless and event-driven AWS architecture**, ensuring scalability, security, and cost efficiency. The solution integrates both a web-based storefront and an intelligent chatbot assistant to enhance user interaction. The key AWS services work together to manage authentication, data storage, backend logic, and conversational AI.
 ```
-
 S3 → Lambda → DynamoDB → API Gateway → Client
 ```
 
+### 🧩 AWS Services Used
+
+| Service | Purpose |
+|----------|----------|
+| **Amazon CloudFront** | Distributes website content globally with low latency and high transfer speed. |
+| **AWS Amplify (Web Hosting)** | Hosts and deploys the front-end application (React or Next.js). |
+| **Amazon Cognito** | Manages user registration, login, and secure authentication. |
+| **Amazon API Gateway** | Acts as the main communication interface between the front-end and backend Lambda functions. |
+| **AWS Lambda (API Handler)** | Handles API requests such as product listing, cart updates, and order management. |
+| **AWS Lambda (Chatbot Handler)** | Processes chatbot logic, integrates with Amazon Lex, and retrieves data from DynamoDB or S3. |
+| **AWS Lambda (Import CSV)** | Automatically imports product or order data from CSV files in S3 into DynamoDB. |
+| **Amazon DynamoDB** | Serves as a NoSQL database storing users, products, and order records. |
+| **Amazon S3** | Stores static assets such as product images and CSV files. |
+| **Amazon Lex** | Powers the chatbot interface for natural language interaction. |
+
+---
+
+Amazon Lex: Provides the conversational interface (chatbot) to help users navigate the store or ask questions.
 | Step | Source Service     | Target Service       | Purpose                           |
 | ---- | ------------------ | -------------------- | --------------------------------- |
 | 1️⃣    | `S3`                 | `Lambda Trigger`       | 🔄 Auto-trigger on file upload       |
