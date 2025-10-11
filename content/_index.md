@@ -23,7 +23,7 @@ The current Flyora application lacks:
 
 The e-commerce platform is designed using a **serverless and event-driven AWS architecture**, ensuring scalability, security, and cost efficiency. The solution integrates both a web-based storefront and an intelligent chatbot assistant to enhance user interaction. The key AWS services work together to manage authentication, data storage, backend logic, and conversational AI.
 ```
-S3 → Lambda → DynamoDB → API Gateway → Client
+
 ```
 
 ### 🧩 AWS Services Used
@@ -43,15 +43,34 @@ S3 → Lambda → DynamoDB → API Gateway → Client
 
 ---
 
-Amazon Lex: Provides the conversational interface (chatbot) to help users navigate the store or ask questions.
-| Step | Source Service     | Target Service       | Purpose                           |
-| ---- | ------------------ | -------------------- | --------------------------------- |
-| 1️⃣    | `S3`                 | `Lambda Trigger`       | 🔄 Auto-trigger on file upload       |
-| 2️⃣    | `Lambda Trigger`     | `DynamoDB`             | 📄 Read CSV files and import data    |
-| 3️⃣    | `Lambda API Handler` | `DynamoDB`             | 🔄 Execute GET/POST operations       |
-| 4️⃣    | `API Gateway`        | `Lambda API Handler`   | 🌐 Provide REST endpoints            |
-| 5️⃣    | `IAM`                | `Entire System`        | 🔒 Access control management         |
-| 6️⃣    | `CloudWatch`         | `Lambda & API Gateway` | 📊 Logging and monitoring            |
+### 🧱 Component Design
+
+#### **Frontend Layer (CloudFront + Amplify)**
+- Users interact with a responsive e-commerce web app hosted on AWS Amplify.  
+- CloudFront delivers content globally for faster load times and better security.  
+
+#### **Authentication Layer (Cognito)**
+- Manages user authentication and authorization.  
+- Provides secure access control for customers and administrators.  
+
+#### **API Layer (API Gateway + Lambda)**  
+- API Gateway routes requests from the frontend to Lambda functions.  
+- **API Handler Lambda** executes core business logic (view products, checkout, update profiles).  
+
+#### **Chatbot Layer (Amazon Lex + Chatbot Handler Lambda)**  
+- Amazon Lex interprets user intents (e.g., “Find a product”, “Track my order”).  
+- Chatbot Handler Lambda fetches and returns relevant information from DynamoDB or S3.  
+
+#### **Data Layer (S3 + DynamoDB)**  
+- **S3** stores static content and uploaded CSV files.  
+- **DynamoDB** stores dynamic data such as users, products, and orders.  
+- **Import CSV Lambda** automatically triggers when a new CSV file is uploaded to S3 and populates DynamoDB.  
+
+#### **Deployment and CI/CD (GitHub + Amplify)**  
+- Source code is managed via GitHub.  
+- AWS Amplify automatically builds and redeploys updates when new commits are pushed, enabling continuous integration and deployment (CI/CD).  
+
+---
 
 ## 💻 Technical Implementation
 
