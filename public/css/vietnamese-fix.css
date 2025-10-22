@@ -1,0 +1,14 @@
+/* Vietnamese font fallback for site text and member names */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap&subset=vietnamese');
+
+body,
+.project-members,
+.site-header,
+.site-content {
+  font-family: 'Noto Sans', 'Work Sans', 'Segoe UI', Tahoma, Geneva, Arial, sans-serif !important;
+}
+
+.project-members {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
