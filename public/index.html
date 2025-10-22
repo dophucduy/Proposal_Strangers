@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=63124&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta name="description" content="A Hugo site for Proposal Strangers">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>AWS Integration Proposal for Flyora Project :: Proposal Strangers</title>
+
+    
+    <link href="/css/nucleus.css?1761104875" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1761104875" rel="stylesheet">
+    <link href="/css/hybrid.css?1761104875" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1761104875" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1761104875" rel="stylesheet">
+    <link href="/css/auto-complete.css?1761104875" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1761104875" rel="stylesheet">
+    <link href="/css/theme.css?1761104875" rel="stylesheet">
+    <link href="/css/tabs.css?1761104875" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1761104875" rel="stylesheet">
+    
+    
+
+  
+  <link href="/css/vietnamese-fix.css?1761104875" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1761104875"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='http://localhost:63124/' class="site-logo">Proposal Strangers</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1761104875"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1761104875"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:63124\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1761104875"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+        
+    </ul>
+
+    
+    
+
+  
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+<div class="container">
+  <header class="site-header">
+    <h1>AWS Integration Proposal for Flyora Project</h1>
+    <div class="tech-badges">
+      <span class="tech-badge">#AWS</span>
+      <span class="tech-badge">#Serverless</span>
+      <span class="tech-badge">#Lambda</span>
+      <span class="tech-badge">#DynamoDB</span>
+      <span class="tech-badge">#S3</span>
+      <span class="tech-badge">#API Gateway</span>
+    </div>
+    <div class="project-members">
+      <strong>Project Members:</strong><br>
+      Đỗ Phúc Duy • Phạm Thành Phúc • Trần Quang Hiếu • Trịnh Quốc Bảo<br>
+      Bùi Hồ Ngọc Hân • Nguyễn Thanh Tân • Lưu Vĩ Khánh
+    </div>
+  </header>
+
+  <main class="site-content">
+    <h2 id="executive-summary">Executive Summary</h2>
+<p>This proposal outlines the integration of AWS cloud services with the existing Flyora application to enhance scalability, reliability, and data processing capabilities. The solution leverages serverless architecture to automate CSV data processing and provide robust API endpoints.</p>
+<h2 id="problem">Problem</h2>
+<p>The current Flyora application lacks:</p>
+<ul>
+<li>Automated file processing capabilities</li>
+<li>Scalable data storage solution</li>
+<li>Reliable API infrastructure</li>
+<li>Monitoring and logging systems</li>
+<li>Secure access control mechanisms</li>
+</ul>
+<h2 id="solution-architecture">Solution Architecture</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Source Service</th>
+          <th>Target Service</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>S3</td>
+          <td>Lambda Trigger</td>
+          <td>Auto-trigger on file upload</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Lambda Trigger</td>
+          <td>DynamoDB</td>
+          <td>Read CSV files and import data</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Lambda API Handler</td>
+          <td>DynamoDB</td>
+          <td>Execute GET/POST operations</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>API Gateway</td>
+          <td>Lambda API Handler</td>
+          <td>Provide REST endpoints</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>IAM</td>
+          <td>Entire System</td>
+          <td>Access control management</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>CloudWatch</td>
+          <td>Lambda &amp; API Gateway</td>
+          <td>Logging and monitoring</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="technical-implementation">Technical Implementation</h2>
+<h3 id="phase-1-storage--triggers">Phase 1: Storage &amp; Triggers</h3>
+<ul>
+<li>Configure S3 bucket for file uploads</li>
+<li>Set up Lambda trigger for automatic processing</li>
+</ul>
+<h3 id="phase-2-data-processing">Phase 2: Data Processing</h3>
+<ul>
+<li>Develop Lambda functions for CSV parsing</li>
+<li>Configure DynamoDB tables for data storage</li>
+</ul>
+<h3 id="phase-3-api-layer">Phase 3: API Layer</h3>
+<ul>
+<li>Create API Gateway endpoints</li>
+<li>Implement Lambda API handlers</li>
+</ul>
+<h3 id="phase-4-security--monitoring">Phase 4: Security &amp; Monitoring</h3>
+<ul>
+<li>Configure IAM roles and policies</li>
+<li>Set up CloudWatch logging and alerts</li>
+</ul>
+<h2 id="timeline--milestones">Timeline &amp; Milestones</h2>
+<ul>
+<li><strong>Week 1-2</strong>: S3 and Lambda trigger setup</li>
+<li><strong>Week 3-4</strong>: DynamoDB integration and data processing</li>
+<li><strong>Week 5-6</strong>: API Gateway and Lambda handlers</li>
+<li><strong>Week 7-8</strong>: IAM security and CloudWatch monitoring</li>
+<li><strong>Week 9</strong>: Testing and deployment</li>
+</ul>
+<h2 id="budget-estimation">Budget Estimation</h2>
+<ul>
+<li><strong>S3 Storage</strong>: $5-10/month</li>
+<li><strong>Lambda Executions</strong>: $10-20/month</li>
+<li><strong>DynamoDB</strong>: $15-25/month</li>
+<li><strong>API Gateway</strong>: $5-15/month</li>
+<li><strong>CloudWatch</strong>: $5-10/month</li>
+<li><strong>Total</strong>: $40-80/month</li>
+</ul>
+<h2 id="risk-assessment">Risk Assessment</h2>
+<p><strong>Low Risk:</strong></p>
+<ul>
+<li>Service availability (99.9% SLA)</li>
+<li>Data security with AWS encryption</li>
+</ul>
+<p><strong>Medium Risk:</strong></p>
+<ul>
+<li>Cost overruns with high usage</li>
+<li>Learning curve for team</li>
+</ul>
+<p><strong>Mitigation:</strong></p>
+<ul>
+<li>Implement cost alerts</li>
+<li>Provide AWS training</li>
+<li>Use reserved capacity where applicable</li>
+</ul>
+<h2 id="expected-outcomes">Expected Outcomes</h2>
+<ul>
+<li><strong>Performance</strong>: 50% faster data processing</li>
+<li><strong>Scalability</strong>: Handle 10x current load</li>
+<li><strong>Reliability</strong>: 99.9% uptime</li>
+<li><strong>Cost Efficiency</strong>: 30% reduction in infrastructure costs</li>
+<li><strong>Security</strong>: Enterprise-grade access controls</li>
+<li><strong>Monitoring</strong>: Real-time system visibility</li>
+</ul>
+<hr>
+
+  </main>
+</div>
+
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/" title="AWS Integration Proposal for Flyora Project"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1761104875"></script>
+    <script src="/js/perfect-scrollbar.min.js?1761104875"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1761104875"></script>
+    <script src="/js/jquery.sticky.js?1761104875"></script>
+    <script src="/js/featherlight.min.js?1761104875"></script>
+    <script src="/js/highlight.pack.js?1761104875"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1761104875"></script>
+    <script src="/js/learn.js?1761104875"></script>
+    <script src="/js/hugo-learn.js?1761104875"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1761104875"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
