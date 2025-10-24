@@ -1,0 +1,24 @@
+baseURL = 'https://dophucduy.github.io/Proposal_Strangers/'
+languageCode = 'en-us'
+title = 'Flyora - Bird E-commerce Proposal'
+theme = 'hugo-theme-learn'
+
+[params]
+  themeVariant = "blue"
+  disableSearch = false
+  disableAssetsBusting = false
+  disableLanguageSwitchingButton = false
+  disableShortcutsTitle = false
+  disableInlineCopyToClipBoard = false
+  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.shortcuts]]
+    name = "<i class='fab fa-github'></i> GitHub"
+    identifier = "ds"
+    url = "https://github.com/matcornic/hugo-theme-learn"
+    weight = 10

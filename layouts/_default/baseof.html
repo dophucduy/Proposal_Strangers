@@ -1,8 +1,0 @@
-{{/* Base template delegating to the theme header/footer partials. This file intentionally
-   does not include its own <html>/<head> tags because the theme's header partial
-   emits the full document head and opening tags. */}}
-{{ partial "header.html" . }}
-
-{{ block "main" . }}{{ end }}
-
-{{ partial "footer.html" . }}
