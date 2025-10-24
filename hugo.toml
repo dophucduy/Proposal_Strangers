@@ -1,6 +1,7 @@
 baseURL = 'https://dophucduy.github.io/Proposal_Strangers/'
 defaultContentLanguage = 'en'
 theme = 'hugo-theme-learn'
+publishDir = 'docs'
 
 [languages]
   [languages.en]
