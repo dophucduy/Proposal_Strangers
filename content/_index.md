@@ -4,9 +4,6 @@ date: 2024-01-01T00:00:00Z
 draft: false
 ---
 
-<div style="text-align: center; margin-bottom: 2rem;">
-  <img src="/images/flyora-logo.svg" alt="Flyora Logo" style="max-width: 200px; height: auto;" />
-</div>
 
 ## 🐦 Proposal: Flyora – E-commerce Platform for Bird Lovers
 

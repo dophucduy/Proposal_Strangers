@@ -1,7 +1,18 @@
 baseURL = 'https://dophucduy.github.io/Proposal_Strangers/'
-languageCode = 'en-us'
-title = 'Flyora - Bird E-commerce Proposal'
+defaultContentLanguage = 'en'
 theme = 'hugo-theme-learn'
+
+[languages]
+  [languages.en]
+    languageCode = 'en-us'
+    title = 'Flyora - Bird E-commerce Proposal'
+    weight = 1
+    languageName = 'English'
+  [languages.vi]
+    languageCode = 'vi-vn'
+    title = 'Flyora - Đề xuất Thương mại Điện tử Chim Cảnh'
+    weight = 2
+    languageName = 'Tiếng Việt'
 
 [params]
   themeVariant = "blue"

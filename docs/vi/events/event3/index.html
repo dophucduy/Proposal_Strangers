@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Event 3 :: AWS System Manager</title>
+
+    
+    <link href="/css/nucleus.css?1761126386" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1761126386" rel="stylesheet">
+    <link href="/css/hybrid.css?1761126386" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1761126386" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1761126386" rel="stylesheet">
+    <link href="/css/auto-complete.css?1761126386" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1761126386" rel="stylesheet">
+    <link href="/css/theme.css?1761126386" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1761126386" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1761126386" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1761126386"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/vi/events/event3/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1761126386"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1761126386"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1761126386"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/" title="Nhật Ký Công Việc" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/">
+          Nhật Ký Công Việc
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/week1/" title="Tuần 1: Nền Tảng" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/week1/">
+          Tuần 1: Nền Tảng
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/week2/" title="Tuần 2: Dịch Vụ Tính Toán" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/week2/">
+          Tuần 2: Dịch Vụ Tính Toán
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/week3/" title="Tuần 3: Lưu Trữ &amp; Cơ Sở Dữ Liệu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/week3/">
+          Tuần 3: Lưu Trữ &amp; Cơ Sở Dữ Liệu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/week4/" title="Tuần 4: Mạng &amp; Bảo Mật" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/week4/">
+          Tuần 4: Mạng &amp; Bảo Mật
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/week5/" title="Tuần 5: Giám Sát &amp; Quản Lý" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/week5/">
+          Tuần 5: Giám Sát &amp; Quản Lý
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/worklog/week6/" title="Tuần 6: Chủ Đề Nâng Cao" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/worklog/week6/">
+          Tuần 6: Chủ Đề Nâng Cao
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/events/" title="Các Events Đã Tham Gia" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/events/">
+          Các Events Đã Tham Gia
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/events/event1/" title="Event 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/events/event1/">
+          Event 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/events/event2/" title="Event 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/events/event2/">
+          Event 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/events/event3/" title="Event 3" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/events/event3/">
+          Event 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+  
+    <section id="prefooter">
+      <hr/>
+      <ul>
+  
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://localhost:1313/events/event3/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="http://localhost:1313/vi/events/event3/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>30-01-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Báo Cáo Thực Tập</a> > <a href='/vi/events/'>Các Events Đã Tham Gia</a> > Event 3
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-bài-thu-hoạch-data-resiliency-in-a-cloud-first-world---aws--commvault">📝 Bài thu hoạch &ldquo;Data Resiliency in a Cloud-first World - AWS + Commvault&rdquo;</a></li>
+    <li><a href="#-mục-đích-của-sự-kiện">🎯 Mục Đích Của Sự Kiện</a></li>
+    <li><a href="#-danh-sách-diễn-giả">🎤 Danh Sách Diễn Giả</a>
+      <ul>
+        <li><a href="#chuyên-gia-aws">Chuyên Gia AWS</a></li>
+        <li><a href="#đại-diện-commvault">Đại Diện Commvault</a></li>
+      </ul>
+    </li>
+    <li><a href="#-nội-dung-nổi-bật">📚 Nội Dung Nổi Bật</a>
+      <ul>
+        <li><a href="#lịch-trình-sự-kiện">Lịch Trình Sự Kiện</a></li>
+      </ul>
+    </li>
+    <li><a href="#-data-resiliency-hiện-đại">🧱 Data Resiliency Hiện Đại</a></li>
+    <li><a href="#-framework-cyber-resilience">🧠 Framework Cyber Resilience</a></li>
+    <li><a href="#-tích-hợp-aws-backup">🔄 Tích Hợp AWS Backup</a></li>
+    <li><a href="#-giải-pháp-immutable-storage">🧮 Giải Pháp Immutable Storage</a></li>
+    <li><a href="#-quy-trình-recovery-tự-động">🤖 Quy Trình Recovery Tự Động</a></li>
+    <li><a href="#-những-gì-học-được">🧠 Những Gì Học Được</a>
+      <ul>
+        <li><a href="#chiến-lược-bảo-vệ-dữ-liệu">Chiến Lược Bảo Vệ Dữ Liệu</a></li>
+        <li><a href="#triển-khai-kỹ-thuật">Triển Khai Kỹ Thuật</a></li>
+        <li><a href="#quản-trị-và-tuân-thủ">Quản Trị và Tuân Thủ</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ứng-dụng-vào-công-việc">🛠️ Ứng Dụng Vào Công Việc</a></li>
+    <li><a href="#-trải-nghiệm-trong-event">🌟 Trải Nghiệm Trong Event</a></li>
+    <li><a href="#-một-số-hình-ảnh-khi-tham-gia-sự-kiện">🖼️ Một Số Hình Ảnh Khi Tham Gia Sự Kiện</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Event 3
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="event-3--báo-cáo-thực-tập">Event 3 :: Báo cáo thực tập</h1>
+<h2 id="-bài-thu-hoạch-data-resiliency-in-a-cloud-first-world---aws--commvault">📝 Bài thu hoạch &ldquo;Data Resiliency in a Cloud-first World - AWS + Commvault&rdquo;</h2>
+<h2 id="-mục-đích-của-sự-kiện">🎯 Mục Đích Của Sự Kiện</h2>
+<p>Khám phá toàn diện về data resiliency, cyber resilience và các chiến lược backup hiện đại trong môi trường cloud-first, với sự tham gia của AWS và Commvault.</p>
+<h2 id="-danh-sách-diễn-giả">🎤 Danh Sách Diễn Giả</h2>
+<h3 id="chuyên-gia-aws">Chuyên Gia AWS</h3>
+<ul>
+<li><strong>AWS Solutions Architects</strong> - Chuyên gia Bảo vệ Dữ liệu và Backup</li>
+<li><strong>AWS Security Team</strong> - Chuyên gia Cyber Resilience</li>
+</ul>
+<h3 id="đại-diện-commvault">Đại Diện Commvault</h3>
+<ul>
+<li><strong>Commvault Technical Specialists</strong> - Quản lý Dữ liệu Cloud</li>
+<li><strong>Elastio Integration Experts</strong> - Giải pháp AWS Backup</li>
+</ul>
+<h2 id="-nội-dung-nổi-bật">📚 Nội Dung Nổi Bật</h2>
+<h3 id="lịch-trình-sự-kiện">Lịch Trình Sự Kiện</h3>
+<ul>
+<li><strong>8:30 AM</strong>: Bữa sáng nhẹ và Đăng ký, networking với đồng nghiệp</li>
+<li><strong>9:30 AM</strong>: Keynote - Yêu cầu Resiliency năm 2025 so với bảo vệ truyền thống năm 2015</li>
+<li><strong>10:00 AM</strong>: Hiện đại hóa Cyber Resilience trên AWS: Immutable Backups, Isolated Testing, Rapid Recovery</li>
+<li><strong>10:30 AM</strong>: Giải lao</li>
+<li><strong>10:50 AM</strong>: Cách bắt đầu với data resiliency trong cloud</li>
+<li><strong>11:25 AM</strong>: Detect, Respond, Recover và Govern với AWS Backup và Elastio</li>
+<li><strong>12:00 PM</strong>: Nghỉ trưa</li>
+<li><strong>1:00 PM</strong>: Hai workshop thực hành chiều (chọn giữa AWS data services hoặc Elastio với AWS Backup)</li>
+<li><strong>4:00 PM</strong>: Quiz vui và thông điệp bước tiếp theo</li>
+</ul>
+<h2 id="-data-resiliency-hiện-đại">🧱 Data Resiliency Hiện Đại</h2>
+<p>Sự tiến hóa từ các giải pháp backup truyền thống sang chiến lược resiliency cloud-native, nhấn mạnh immutable backups và quy trình recovery tự động.</p>
+<h2 id="-framework-cyber-resilience">🧠 Framework Cyber Resilience</h2>
+<p>Cách tiếp cận toàn diện để bảo vệ chống ransomware và các mối đe dọa cyber sử dụng dịch vụ bảo mật AWS và khả năng bảo vệ nâng cao của Commvault.</p>
+<h2 id="-tích-hợp-aws-backup">🔄 Tích Hợp AWS Backup</h2>
+<p>Tìm hiểu sâu về khả năng dịch vụ AWS Backup, cross-region replication và tích hợp với các giải pháp bên thứ ba như Elastio để tăng cường bảo vệ dữ liệu.</p>
+<h2 id="-giải-pháp-immutable-storage">🧮 Giải Pháp Immutable Storage</h2>
+<p>Triển khai chiến lược immutable backup sử dụng AWS S3 Object Lock và Glacier cho lưu trữ dữ liệu dài hạn và yêu cầu tuân thủ.</p>
+<h2 id="-quy-trình-recovery-tự-động">🤖 Quy Trình Recovery Tự Động</h2>
+<p>Demo các workflow disaster recovery tự động, bao gồm môi trường testing cô lập và quy trình recovery nhanh cho tính liên tục kinh doanh.</p>
+<h2 id="-những-gì-học-được">🧠 Những Gì Học Được</h2>
+<h3 id="chiến-lược-bảo-vệ-dữ-liệu">Chiến Lược Bảo Vệ Dữ Liệu</h3>
+<ul>
+<li>Chuyển đổi từ backup truyền thống sang cloud-native resiliency cần kế hoạch toàn diện</li>
+<li>Immutable backups là thiết yếu cho việc bảo vệ ransomware</li>
+<li>Kiểm tra thường xuyên các quy trình recovery đảm bảo tính liên tục kinh doanh</li>
+</ul>
+<h3 id="triển-khai-kỹ-thuật">Triển Khai Kỹ Thuật</h3>
+<ul>
+<li>AWS Backup cung cấp quản lý tập trung cho nhiều dịch vụ AWS</li>
+<li>Elastio nâng cao AWS Backup với monitoring và analytics tiên tiến</li>
+<li>Cross-region replication đảm bảo disaster recovery theo địa lý</li>
+</ul>
+<h3 id="quản-trị-và-tuân-thủ">Quản Trị và Tuân Thủ</h3>
+<ul>
+<li>Báo cáo tuân thủ tự động giảm overhead quản trị</li>
+<li>Quản lý lifecycle dữ liệu tối ưu chi phí lưu trữ</li>
+<li>Audit trails thường xuyên duy trì tuân thủ quy định</li>
+</ul>
+<h2 id="-ứng-dụng-vào-công-việc">🛠️ Ứng Dụng Vào Công Việc</h2>
+<ul>
+<li>Triển khai AWS Backup cho EC2, RDS và EFS resources</li>
+<li>Thiết lập tích hợp Elastio để tăng cường monitoring backup</li>
+<li>Tạo automated disaster recovery runbooks</li>
+<li>Thiết lập chính sách data retention cho yêu cầu tuân thủ</li>
+</ul>
+<h2 id="-trải-nghiệm-trong-event">🌟 Trải Nghiệm Trong Event</h2>
+<p>Sự kiện cung cấp những hiểu biết có giá trị về chiến lược bảo vệ dữ liệu hiện đại trong môi trường cloud. Các workshop thực hành đặc biệt có lợi, mang lại kinh nghiệm thực tế với AWS Backup và tích hợp Elastio. Các phiên networking cho phép chia sẻ kiến thức với các đồng nghiệp trong ngành đối mặt với những thách thức data resiliency tương tự.</p>
+<h2 id="-một-số-hình-ảnh-khi-tham-gia-sự-kiện">🖼️ Một Số Hình Ảnh Khi Tham Gia Sự Kiện</h2>
+<p><img src="/images/event3/1.jpg" alt="Sự Kiện Data Resiliency - Keynote Khai Mạc">
+<em>Keynote khai mạc về yêu cầu resiliency năm 2025</em></p>
+<p><img src="/images/event3/2.jpg" alt="Workshop AWS Backup">
+<em>Workshop thực hành về AWS data services</em></p>
+<p><img src="/images/event3/3.jpg" alt="Demo Tích Hợp Elastio">
+<em>Demonstration tích hợp Elastio với AWS Backup</em></p>
+<p><img src="/images/event3/4.jpg" alt="Phiên Networking">
+<em>Networking và chia sẻ kiến thức với các chuyên gia trong ngành</em></p>
+<p><img src="/images/event3/5.jpg" alt="Nghỉ Trưa">
+<em>Nghỉ trưa và networking với đồ ăn ngon và đồ uống</em></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/events/event2/" title="Event 2"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/events/event1/" title="Event 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1761126386"></script>
+    <script src="/js/perfect-scrollbar.min.js?1761126386"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1761126386"></script>
+    <script src="/js/jquery.sticky.js?1761126386"></script>
+    <script src="/js/featherlight.min.js?1761126386"></script>
+    <script src="/js/highlight.pack.js?1761126386"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1761126386"></script>
+    <script src="/js/learn.js?1761126386"></script>
+    <script src="/js/hugo-learn.js?1761126386"></script>
+
+    <link href="/mermaid/mermaid.css?1761126386" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1761126386"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
