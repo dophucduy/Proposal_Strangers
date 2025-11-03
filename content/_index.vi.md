@@ -28,33 +28,32 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 ### 3. Kiến trúc Giải pháp
 
 #### 🧩 Frontend (Tầng Web)
-- **Amazon S3**: Lưu trữ web tĩnh cho tài sản frontend
-- **CloudFront**: CDN cho phân phối nội dung toàn cầu
-- **Thiết kế đáp ứng**: Giao diện thân thiện với di động
+* **Amazon S3**: Lưu trữ web tĩnh cho tài sản frontend
+* **CloudFront**: CDN cho phân phối nội dung toàn cầu
+* **Thiết kế đáp ứng**: Giao diện thân thiện với di động
 
 #### 🔐 Xác thực & Bảo mật
-- **Amazon Cognito**: Xác thực và ủy quyền người dùng
-- **IAM**: Quản lý danh tính và truy cập
-- **CloudWatch**: Giám sát và lớp bảo mật
+* **Amazon Cognito**: Xác thực và ủy quyền người dùng
+* **IAM**: Quản lý danh tính và truy cập
+* **CloudWatch**: Giám sát và lớp bảo mật
 
 #### 🔄 Dịch vụ Backend (Tầng Ứng dụng)
-- **Amazon API Gateway**: Quản lý API RESTful
-- **AWS Lambda Functions**: 
+* **Amazon API Gateway**: Quản lý API RESTful
+* **AWS Lambda Functions**: 
   - Xử lý chatbot
-  - Tự động hóa nhập
   - Xử lý API
-- **Amazon Nova Lite (Bedrock)**: Khuyến nghị được hỗ trợ AI
-- **Amazon OpenSearch**: Khả năng tìm kiếm nâng cao
+  - Tự động hóa nhập
+* **Amazon Bedrock**: Mô hình nhúng và LLM cho các tính năng AI
 
 #### 📦 Dữ liệu & Lưu trữ (Tầng Dữ liệu)
-- **Amazon S3**: Hình ảnh sản phẩm và tài sản tĩnh
-- **DynamoDB**: Cơ sở dữ liệu NoSQL cho danh mục sản phẩm
-- **MySQL Workbench**: Thiết kế và quản lý cơ sở dữ liệu
+* **Amazon RDS for PostgreSQL**: Cơ sở dữ liệu quan hệ
+* **DynamoDB**: Cơ sở dữ liệu NoSQL
+* **Amazon S3**: Lưu trữ dữ liệu
 
 #### 🔧 CI/CD & Phát triển
-- **GitHub**: Kiểm soát phiên bản và cộng tác
-- **AWS CodeBuild**: Quy trình xây dựng tự động
-- **AWS CodePipeline**: Tích hợp và triển khai liên tục
+* **GitLab**: Kiểm soát phiên bản và kích hoạt pipeline CI/CD
+* **AWS CodeBuild**: Quy trình xây dựng tự động
+* **AWS CodePipeline**: Tích hợp và triển khai liên tục
 
 ---
 
@@ -90,18 +89,18 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 ### 6. Ước tính Ngân sách
 
-| Mục                      | Chi phí Hàng tháng | Chi phí Hàng năm |
-|--------------------------|-------------------|------------------|
-| Amazon S3 + CloudFront   | $0.20             | $2.40            |
-| AWS Lambda               | $0.00             | $0.00            |
-| Amazon API Gateway       | $0.01             | $0.12            |
-| DynamoDB                 | $0.25             | $3.00            |
-| Amazon Cognito           | $0.08             | $0.96            |
-| CloudWatch & Logs        | $0.05             | $0.60            |
-| Amazon Bedrock (Nova)    | $0.10             | $1.20            |
-| OpenSearch Service       | $0.15             | $1.80            |
-| CodePipeline/CodeBuild   | $0.05             | $0.60            |
-| **Tổng Ước tính**        | **$0.89**         | **$10.68**       |
+| Mục                              | Chi phí Hàng tháng | Chi phí Hàng năm |
+|-----------------------------------|-------------------|------------------|
+| Amazon S3 + CloudFront            | $0.20             | $2.40            |
+| AWS Lambda                       | $0.00             | $0.00            |
+| Amazon API Gateway                | $0.01             | $0.12            |
+| DynamoDB                          | $0.25             | $3.00            |
+| Amazon Cognito                    | $0.08             | $0.96            |
+| CloudWatch & Logs                 | $0.05             | $0.60            |
+| Amazon Bedrock (Nhúng/LLM)        | $0.10             | $1.20            |
+| Amazon RDS for PostgreSQL         | $0.20             | $2.40            |
+| CodePipeline/CodeBuild            | $0.05             | $0.60            |
+| **Tổng Ước tính**                 | **$0.94**         | **$11.28**       |
 
 Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 
@@ -109,12 +108,13 @@ Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 
 ### 7. Đánh giá Rủi ro
 
-| Rủi ro                  | Tác động | Xác suất | Chiến lược Giảm thiểu                        |
-|-------------------------|----------|----------|----------------------------------------------|
-| Lambda cold starts      | Trung bình | Trung bình | Đồng thời được cung cấp cho các hàm quan trọng |
-| DynamoDB throttling     | Trung bình | Thấp     | Tự động mở rộng và thiết kế khóa phân vùng phù hợp |
-| Vượt chi phí            | Thấp     | Thấp     | Giám sát với AWS Budgets và cảnh báo CloudWatch |
-| OpenSearch downtime     | Trung bình | Thấp     | Triển khai tìm kiếm dự phòng với DynamoDB     |
+| Rủi ro                      | Tác động   | Xác suất   | Chiến lược Giảm thiểu                        |
+|-----------------------------|------------|------------|----------------------------------------------|
+| Lambda cold starts          | Trung bình | Trung bình | Đồng thời được cung cấp cho các hàm quan trọng |
+| DynamoDB throttling         | Trung bình | Thấp       | Tự động mở rộng và thiết kế khóa phân vùng phù hợp |
+| RDS downtime                | Trung bình | Thấp       | Triển khai Multi-AZ, sao lưu tự động          |
+| Vượt chi phí                | Thấp       | Thấp       | Giám sát với AWS Budgets và cảnh báo CloudWatch |
+| Giới hạn API Bedrock        | Trung bình | Thấp       | Giám sát sử dụng, dự phòng kết quả cache      |
 
 ---
 
@@ -122,9 +122,11 @@ Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 
 #### Cải tiến Kỹ thuật:
 - Giao diện người dùng đáp ứng, thân thiện với di động
-- Xác thực người dùng an toàn và quản lý vai trò
-- Backend có thể mở rộng với lọc sản phẩm thời gian thực
-- Tìm kiếm nhanh và khuyến nghị cá nhân hóa (tương lai)
+- Xác thực người dùng an toàn và quản lý vai trò (Cognito, IAM)
+- Backend có thể mở rộng với Lambda/API Gateway
+- Lọc sản phẩm thời gian thực và hỗ trợ chatbot
+- Tính năng AI qua Bedrock (Nhúng/LLM)
+- Lưu trữ dữ liệu mạnh mẽ với RDS, DynamoDB, S3
 
 #### Giá trị Kinh doanh:
 - Nền tảng tập trung cho người yêu chim ở Việt Nam

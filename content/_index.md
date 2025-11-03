@@ -37,21 +37,20 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 - **CloudWatch**: Monitoring and security layer
 
 #### 🔄 Backend Services (App Tier)
-- **Amazon API Gateway**: RESTful API management
+- **Amazon API Gateway**: HTTP API management
 - **AWS Lambda Functions**: 
   - Chatbot handler
   - Import automation
   - API handler
-- **Amazon Nova Lite (Bedrock)**: AI-powered recommendations
-- **Amazon OpenSearch**: Advanced search capabilities
+- **Amazon Bedrock**: Embedding Model and LLM Model for AI-powered features
 
 #### 📦 Data & Storage (Data Tier)
-- **Amazon S3**: Product images and static assets
-- **DynamoDB**: NoSQL database for product catalog
-- **MySQL Workbench**: Database design and management
+- **Amazon RDS for PostgreSQL**: Relational database
+- **DynamoDB**: NoSQL database
+- **Amazon S3**: Data storage
 
 #### 🔧 CI/CD & Development
-- **GitHub**: Version control and collaboration
+- **GitLab**:  Version control and CI/CD pipeline triggers
 - **AWS CodeBuild**: Automated build process
 - **AWS CodePipeline**: Continuous integration and deployment
 
@@ -89,18 +88,18 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 6. Budget Estimation
 
-| Item                  | Monthly Cost | Annual Cost |
-|-----------------------|--------------|-------------|
-| Amazon S3 + CloudFront| $0.20        | $2.40       |
-| AWS Lambda            | $0.00        | $0.00       |
-| Amazon API Gateway    | $0.01        | $0.12       |
-| DynamoDB              | $0.25        | $3.00       |
-| Amazon Cognito        | $0.08        | $0.96       |
-| CloudWatch & Logs     | $0.05        | $0.60       |
-| Amazon Bedrock (Nova) | $0.10        | $1.20       |
-| OpenSearch Service    | $0.15        | $1.80       |
-| CodePipeline/CodeBuild| $0.05        | $0.60       |
-| **Total Estimate**    | **$0.89**    | **$10.68**  |
+| Item                        | Monthly Cost | Annual Cost |
+|-----------------------------|--------------|-------------|
+| Amazon S3 + CloudFront      | $0.20        | $2.40       |
+| AWS Lambda                  | $0.00        | $0.00       |
+| Amazon API Gateway          | $0.01        | $0.12       |
+| DynamoDB                    | $0.25        | $3.00       |
+| Amazon Cognito              | $0.08        | $0.96       |
+| CloudWatch & Logs           | $0.05        | $0.60       |
+| Amazon Bedrock (Embedding/LLM)| $0.10      | $1.20       |
+| Amazon RDS for PostgreSQL   | $0.20        | $2.40       |
+| CodePipeline/CodeBuild      | $0.05        | $0.60       |
+| **Total Estimate**          | **$0.94**    | **$11.28**  |
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 
@@ -108,12 +107,13 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 
 ### 7. Risk Assessment
 
-| Risk               | Impact   | Probability | Mitigation Strategy                          |
-|--------------------|----------|-------------|-----------------------------------------------|
-| Lambda cold starts | Medium   | Medium      | Provisioned concurrency for critical functions|
-| DynamoDB throttling| Medium   | Low         | Auto-scaling and proper partition key design  |
-| Cost overruns      | Low      | Low         | Monitor with AWS Budgets and CloudWatch alerts|
-| OpenSearch downtime| Medium   | Low         | Implement fallback search with DynamoDB       |
+| Risk                   | Impact   | Probability | Mitigation Strategy                          |
+|------------------------|----------|-------------|-----------------------------------------------|
+| Lambda cold starts     | Medium   | Medium      | Provisioned concurrency for critical functions|
+| DynamoDB throttling    | Medium   | Low         | Auto-scaling and proper partition key design  |
+| RDS downtime           | Medium   | Low         | Multi-AZ deployment, automated backups        |
+| Cost overruns          | Low      | Low         | Monitor with AWS Budgets and CloudWatch alerts|
+| Bedrock API limits     | Medium   | Low         | Monitor usage, fallback to cached results     |
 
 ---
 
@@ -121,9 +121,11 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 
 #### Technical Improvements:
 - Responsive, mobile-friendly UI
-- Secure user authentication and role management
-- Scalable backend with real-time product filtering
-- Fast search and personalized recommendations (future)
+- Secure user authentication and role management (Cognito, IAM)
+- Scalable backend with Lambda/API Gateway
+- Real-time product filtering and chatbot support
+- AI-powered features via Bedrock (Embedding/LLM)
+- Robust data storage with RDS, DynamoDB, and S3
 
 #### Business Value:
 - Centralized platform for bird lovers in Vietnam
