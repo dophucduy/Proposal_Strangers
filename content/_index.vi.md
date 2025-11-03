@@ -26,6 +26,8 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 ---
 
 ### 3. Kiến trúc Giải pháp
+#### 📄 Sơ đồ kiến trúc hệ thống
+![Sơ đồ kiến trúc hệ thống PDF](/images/AWS_Gr7-FINALLL.drawio.pdf)
 
 #### 🧩 Frontend (Tầng Web)
 * **Amazon S3**: Lưu trữ web tĩnh cho tài sản frontend

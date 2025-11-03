@@ -25,14 +25,15 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 ---
 
 ### 3. Solution Architecture
+#### 📄 System Architecture Diagram
+![System Architecture PDF](/images/AWS_Gr7-FINALLL.drawio.pdf)
 
 #### 🧩 Frontend (Web Tier)
 - **Amazon S3**: Static web hosting for frontend assets
 - **CloudFront**: CDN for global content delivery
 - **Responsive design**: Mobile-friendly interface
 
-#### 📄 System Architecture Diagram
-![System Architecture PDF](/images/AWS_Gr7-FINALLL.drawio.pdf)
+
 
 #### 🔐 Authentication & Security
 - **Amazon Cognito**: User authentication and authorization
