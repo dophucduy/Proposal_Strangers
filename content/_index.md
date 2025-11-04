@@ -124,7 +124,7 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 ### 8. Expected Outcomes
 
 #### Technical Improvements:
-- Responsive, mobile-friendly UI
+- Responsive, mobile-friendly UI/UX
 - Secure user authentication and role management (Cognito, IAM)
 - Scalable backend with Lambda/API Gateway
 - Real-time product filtering and chatbot support
