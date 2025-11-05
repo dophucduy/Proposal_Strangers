@@ -4,6 +4,12 @@ date: 2024-01-01T00:00:00Z
 draft: false
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+body, html {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+}
+</style>
 
 
 ## 🐦 Đề xuất: Flyora – Nền tảng Thương mại Điện tử cho Người yêu Chim
@@ -26,8 +32,8 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 ---
 
 ### 3. Kiến trúc Giải pháp
-#### 📄 Sơ đồ kiến trúc hệ thống
-![Sơ đồ kiến trúc hệ thống PDF](/images/AWS_Gr7-FINALLL.drawio.pdf)
+#### 📄 Sơ đồ Kiến trúc Hệ thống
+![Sơ đồ Kiến trúc Hệ thống](/images/AWS_Gr7-FINALLL.drawio.png)
 
 #### 🧩 Frontend (Tầng Web)
 * **Amazon S3**: Lưu trữ web tĩnh cho tài sản frontend
