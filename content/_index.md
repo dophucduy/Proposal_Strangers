@@ -26,7 +26,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 3. Solution Architecture
 #### 📄 System Architecture Diagram
-![System Architecture Diagram](/images/SystemArch.drawio.png)
+![System Architecture Diagram](https://phucqb.sirv.com/Images/AWS_Gr7-Page-1.drawio.png)
 
 #### 🧩 Frontend (Web Tier)
 - **Amazon S3**: Static web hosting for frontend assets

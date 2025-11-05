@@ -12,21 +12,22 @@
     <title>Strangers_Proposal :: Flyora - Bird E-commerce Proposal</title>
 
     
-    <link href="/Proposal_Strangers/css/nucleus.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/fontawesome-all.min.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/hybrid.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/featherlight.min.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/perfect-scrollbar.min.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/auto-complete.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/atom-one-dark-reasonable.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/theme.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/hugo-theme.css?1761299445" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/nucleus.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/fontawesome-all.min.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/hybrid.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/featherlight.min.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/perfect-scrollbar.min.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/auto-complete.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/atom-one-dark-reasonable.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/theme.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/tabs.css?1762331419" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/hugo-theme.css?1762331419" rel="stylesheet">
     
-    <link href="/Proposal_Strangers/css/theme-blue.css?1761299445" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/theme-blue.css?1762331419" rel="stylesheet">
     
     
 
-    <script src="/Proposal_Strangers/js/jquery-3.3.1.min.js?1761299445"></script>
+    <script src="/Proposal_Strangers/js/jquery-3.3.1.min.js?1762331419"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,24 +58,32 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Proposal_Strangers/js/lunr.min.js?1761299445"></script>
-<script type="text/javascript" src="/Proposal_Strangers/js/auto-complete.js?1761299445"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/lunr.min.js?1762331419"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/auto-complete.js?1762331419"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/Proposal_Strangers\/";
     
 </script>
-<script type="text/javascript" src="/Proposal_Strangers/js/search.js?1761299445"></script>
-
+<script type="text/javascript" src="/Proposal_Strangers/js/search.js?1762331419"></script>
     
   </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
 
     <div class="highlightable">
     <ul class="topics">
 
         
           
-         
+        
     </ul>
 
     
@@ -83,7 +92,7 @@
         <h3>More</h3>
         <ul>
           
-              <li> 
+              <li>
                   <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-github'></i> GitHub</a>
               </li>
           
@@ -91,11 +100,11 @@
       </section>
     
 
-  
+    
     <section id="prefooter">
       <hr/>
       <ul>
-  
+      
         <li>
           <a class="padding">
             <i class="fas fa-language fa-fw"></i>
@@ -141,7 +150,7 @@
         </a>
         </li>
       
-      
+
       
       </ul>
     </section>
@@ -185,7 +194,6 @@
 
 
 
-
         <section id="body">
         <div id="overlay"></div>
         <div class="padding highlightable">
@@ -220,6 +228,8 @@
 Flyora delivers a responsive, category-driven shopping experience with secure user authentication, real-time product filtering, and a scalable backend. It supports both desktop and mobile users, with future plans for AI-powered recommendations and chatbot support.</p>
 <hr>
 <h3 id="3-solution-architecture">3. Solution Architecture</h3>
+<h4 id="-system-architecture-diagram">📄 System Architecture Diagram</h4>
+<p><img src="https://phucqb.sirv.com/Images/AWS_Gr7-Page-1.drawio.png" alt="System Architecture Diagram"></p>
 <h4 id="-frontend-web-tier">🧩 Frontend (Web Tier)</h4>
 <ul>
 <li><strong>Amazon S3</strong>: Static web hosting for frontend assets</li>
@@ -242,17 +252,17 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 <li>API handler</li>
 </ul>
 </li>
-<li><strong>Amazon Nova Lite (Bedrock)</strong>: AI-powered recommendations</li>
-<li><strong>Amazon OpenSearch</strong>: Advanced search capabilities</li>
+<li><strong>Amazon Bedrock</strong>: Embedding Model and LLM Model for AI-powered features</li>
 </ul>
 <h4 id="-data--storage-data-tier">📦 Data &amp; Storage (Data Tier)</h4>
 <ul>
-<li><strong>Amazon S3</strong>: Product images and static assets</li>
-<li><strong>DynamoDB</strong>: NoSQL database for product catalog</li>
+<li><strong>Amazon RDS for PostgreSQL</strong>: Relational database</li>
+<li><strong>DynamoDB</strong>: NoSQL database</li>
+<li><strong>Amazon S3</strong>: Data storage</li>
 </ul>
 <h4 id="-cicd--development">🔧 CI/CD &amp; Development</h4>
 <ul>
-<li><strong>GitLab</strong>: Version control and collaboration</li>
+<li><strong>GitLab</strong>:  Version control and CI/CD pipeline triggers</li>
 <li><strong>AWS CodeBuild</strong>: Automated build process</li>
 <li><strong>AWS CodePipeline</strong>: Continuous integration and deployment</li>
 </ul>
@@ -347,14 +357,14 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
           <td>$0.60</td>
       </tr>
       <tr>
-          <td>Amazon Bedrock (Nova)</td>
+          <td>Amazon Bedrock (Embedding/LLM)</td>
           <td>$0.10</td>
           <td>$1.20</td>
       </tr>
       <tr>
-          <td>OpenSearch Service</td>
-          <td>$0.15</td>
-          <td>$1.80</td>
+          <td>Amazon RDS for PostgreSQL</td>
+          <td>$0.20</td>
+          <td>$2.40</td>
       </tr>
       <tr>
           <td>CodePipeline/CodeBuild</td>
@@ -363,8 +373,8 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
       </tr>
       <tr>
           <td><strong>Total Estimate</strong></td>
-          <td><strong>$0.89</strong></td>
-          <td><strong>$10.68</strong></td>
+          <td><strong>$0.94</strong></td>
+          <td><strong>$11.28</strong></td>
       </tr>
   </tbody>
 </table>
@@ -394,16 +404,22 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
           <td>Auto-scaling and proper partition key design</td>
       </tr>
       <tr>
+          <td>RDS downtime</td>
+          <td>Medium</td>
+          <td>Low</td>
+          <td>Multi-AZ deployment, automated backups</td>
+      </tr>
+      <tr>
           <td>Cost overruns</td>
           <td>Low</td>
           <td>Low</td>
           <td>Monitor with AWS Budgets and CloudWatch alerts</td>
       </tr>
       <tr>
-          <td>OpenSearch downtime</td>
+          <td>Bedrock API limits</td>
           <td>Medium</td>
           <td>Low</td>
-          <td>Implement fallback search with DynamoDB</td>
+          <td>Monitor usage, fallback to cached results</td>
       </tr>
   </tbody>
 </table>
@@ -411,10 +427,12 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 <h3 id="8-expected-outcomes">8. Expected Outcomes</h3>
 <h4 id="technical-improvements">Technical Improvements:</h4>
 <ul>
-<li>Responsive, mobile-friendly UI</li>
-<li>Secure user authentication and role management</li>
-<li>Scalable backend with real-time product filtering</li>
-<li>Fast search and personalized recommendations (future)</li>
+<li>Responsive, mobile-friendly, UI/UX</li>
+<li>Secure user authentication and role management (Cognito, IAM)</li>
+<li>Scalable backend with Lambda/API Gateway</li>
+<li>Real-time product filtering and chatbot support</li>
+<li>AI-powered features via Bedrock (Embedding/LLM)</li>
+<li>Robust data storage with RDS, DynamoDB, and S3</li>
 </ul>
 <h4 id="business-value">Business Value:</h4>
 <ul>
@@ -426,7 +444,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 	
   
         
-        </div> 
+        </div>
         
 
       </div>
@@ -434,7 +452,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
     <div id="navigation">
         
         
-        
+
         
             
             
@@ -453,7 +471,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
                     
             
         
-        
+
         
 
 
@@ -465,26 +483,28 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Proposal_Strangers/js/clipboard.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/perfect-scrollbar.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/perfect-scrollbar.jquery.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/jquery.sticky.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/featherlight.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/highlight.pack.js?1761299445"></script>
+    <script src="/Proposal_Strangers/js/clipboard.min.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/perfect-scrollbar.min.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/perfect-scrollbar.jquery.min.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/jquery.sticky.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/featherlight.min.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/highlight.pack.js?1762331419"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Proposal_Strangers/js/modernizr.custom-3.6.0.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/learn.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/hugo-learn.js?1761299445"></script>
-
-    <link href="/Proposal_Strangers/mermaid/mermaid.css?1761299445" rel="stylesheet" />
-    <script src="/Proposal_Strangers/mermaid/mermaid.js?1761299445"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
+    <script src="/Proposal_Strangers/js/modernizr.custom-3.6.0.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/learn.js?1762331419"></script>
+    <script src="/Proposal_Strangers/js/hugo-learn.js?1762331419"></script>
+    
+        
+            <script src="/Proposal_Strangers/mermaid/mermaid.js?1762331419"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
