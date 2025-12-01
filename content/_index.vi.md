@@ -41,9 +41,8 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 * **Thiết kế đáp ứng**: Giao diện thân thiện với di động
 
 #### 🔐 Xác thực & Bảo mật
-* **Amazon Cognito**: Xác thực và ủy quyền người dùng
 * **IAM**: Quản lý danh tính và truy cập
-* **CloudWatch**: Giám sát và lớp bảo mật
+* **CloudWatch & AWS X-Ray**: Giám sát và theo dõi phân tán
 
 #### 🔄 Dịch vụ Backend (Tầng Ứng dụng)
 * **Amazon API Gateway**: Quản lý API RESTful
@@ -74,7 +73,7 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 #### Tháng 1 - Tập trung Học AWS:
 - **Tuần 1-2**: Cơ bản AWS (S3, Lambda, API Gateway, DynamoDB)
-- **Tuần 3**: Dịch vụ nâng cao (Cognito, Bedrock, OpenSearch)
+- **Tuần 3**: Dịch vụ nâng cao (Bedrock, OpenSearch)
 - **Tuần 4**: Thiết kế kiến trúc và mô hình hóa cơ sở dữ liệu với MySQL Workbench
 
 #### Yêu cầu Kỹ thuật:
@@ -103,12 +102,12 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 | AWS Lambda                       | $0.00             | $0.00            |
 | Amazon API Gateway                | $0.01             | $0.12            |
 | DynamoDB                          | $0.25             | $3.00            |
-| Amazon Cognito                    | $0.08             | $0.96            |
 | CloudWatch & Logs                 | $0.05             | $0.60            |
 | Amazon Bedrock (Nhúng/LLM)        | $0.10             | $1.20            |
 | Amazon RDS for PostgreSQL         | $0.20             | $2.40            |
 | CodePipeline/CodeBuild            | $0.05             | $0.60            |
-| **Tổng Ước tính**                 | **$0.94**         | **$11.28**       |
+| AWS X-Ray                         | $0.02             | $0.24            |
+| **Tổng Ước tính**                 | **$0.96**         | **$11.52**       |
 
 Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 
@@ -129,9 +128,9 @@ Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 ### 8. Kết quả Mong đợi
 
 #### Cải tiến Kỹ thuật:
-- Giao diện người dùng đáp ứng, thân thiện với di động
-- Xác thực người dùng an toàn và quản lý vai trò (Cognito, IAM)
-- Backend có thể mở rộng với Lambda/API Gateway
+* Giao diện người dùng đáp ứng, thân thiện với di động
+* Xác thực người dùng an toàn và quản lý vai trò (IAM)
+* Backend có thể mở rộng với Lambda/API Gateway
 - Lọc sản phẩm thời gian thực và hỗ trợ chatbot
 - Tính năng AI qua Bedrock (Nhúng/LLM)
 - Lưu trữ dữ liệu mạnh mẽ với RDS, DynamoDB, S3

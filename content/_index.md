@@ -36,12 +36,15 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 
 #### 🔐 Authentication & Security
-- **Amazon Cognito**: User authentication and authorization
+#### 🔐 Authentication & Security
 - **IAM**: Identity and access management
-- **CloudWatch**: Monitoring and security layer
+- **CloudWatch & AWS X-Ray**: Monitoring and distributed tracing
 
 #### 🔄 Backend Services (App Tier)
-- **Amazon API Gateway**: HTTP API management
+#### Technical Improvements:
+- Responsive, mobile-friendly UI
+- Secure user authentication and role management (IAM)
+- Scalable backend with Lambda/API Gateway
 - **AWS Lambda Functions**: 
   - Chatbot handler
   - Import automation
@@ -69,7 +72,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 #### Month 1 - AWS Learning Focus:
 - **Week 1-2**: AWS fundamentals (S3, Lambda, API Gateway, DynamoDB)
-- **Week 3**: Advanced services (Cognito, Bedrock, OpenSearch)
+- **Week 3**: Advanced services (Bedrock, OpenSearch)
 - **Week 4**: Architecture design and database modeling with MySQL Workbench
 
 #### Technical Requirements:
@@ -98,12 +101,12 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 | AWS Lambda                  | $0.00        | $0.00       |
 | Amazon API Gateway          | $0.01        | $0.12       |
 | DynamoDB                    | $0.25        | $3.00       |
-| Amazon Cognito              | $0.08        | $0.96       |
 | CloudWatch & Logs           | $0.05        | $0.60       |
 | Amazon Bedrock (Embedding/LLM)| $0.10      | $1.20       |
 | Amazon RDS for PostgreSQL   | $0.20        | $2.40       |
 | CodePipeline/CodeBuild      | $0.05        | $0.60       |
-| **Total Estimate**          | **$0.94**    | **$11.28**  |
+| AWS X-Ray                   | $0.02        | $0.24       |
+| **Total Estimate**          | **$0.96**    | **$11.52**  |
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 
@@ -125,7 +128,7 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 
 #### Technical Improvements:
 - Responsive, mobile-friendly, UI/UX
-- Secure user authentication and role management (Cognito, IAM)
+- Secure user authentication and role management (IAM)
 - Scalable backend with Lambda/API Gateway
 - Real-time product filtering and chatbot support
 - AI-powered features via Bedrock (Embedding/LLM)

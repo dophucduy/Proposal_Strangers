@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/Proposal_Strangers/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Proposal_Strangers/livereload" data-no-instant defer></script>
+  <head><script src="/Proposal_Strangers/livereload.js?mindelay=10&amp;v=2&amp;port=53998&amp;path=Proposal_Strangers/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.150.0">
@@ -12,21 +12,21 @@
     <title>Strangers_Proposal :: Flyora - Bird E-commerce Proposal</title>
 
     
-    <link href="/Proposal_Strangers/css/nucleus.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/fontawesome-all.min.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/hybrid.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/featherlight.min.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/perfect-scrollbar.min.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/auto-complete.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/atom-one-dark-reasonable.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/theme.css?1761299445" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/hugo-theme.css?1761299445" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/nucleus.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/fontawesome-all.min.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/hybrid.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/featherlight.min.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/perfect-scrollbar.min.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/auto-complete.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/atom-one-dark-reasonable.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/theme.css?1764575683" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/hugo-theme.css?1764575683" rel="stylesheet">
     
-    <link href="/Proposal_Strangers/css/theme-blue.css?1761299445" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/theme-blue.css?1764575683" rel="stylesheet">
     
     
 
-    <script src="/Proposal_Strangers/js/jquery-3.3.1.min.js?1761299445"></script>
+    <script src="/Proposal_Strangers/js/jquery-3.3.1.min.js?1764575683"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Proposal_Strangers/js/lunr.min.js?1761299445"></script>
-<script type="text/javascript" src="/Proposal_Strangers/js/auto-complete.js?1761299445"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/lunr.min.js?1764575683"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/auto-complete.js?1764575683"></script>
 <script type="text/javascript">
     
-        var baseurl = "http:\/\/localhost:1313\/Proposal_Strangers\/";
+        var baseurl = "http:\/\/localhost:53998\/Proposal_Strangers\/";
     
 </script>
-<script type="text/javascript" src="/Proposal_Strangers/js/search.js?1761299445"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/search.js?1764575683"></script>
 
     
   </div>
@@ -109,7 +109,7 @@
                   
                     
                     
-                      <option id="en" value="http://localhost:1313/Proposal_Strangers/" selected>English</option>
+                      <option id="en" value="http://localhost:53998/Proposal_Strangers/" selected>English</option>
                     
                   
               
@@ -123,7 +123,7 @@
                   
                     
                     
-                      <option id="vi" value="http://localhost:1313/Proposal_Strangers/vi/">Tiếng Việt</option>
+                      <option id="vi" value="http://localhost:53998/Proposal_Strangers/vi/">Tiếng Việt</option>
                     
                   
               
@@ -220,6 +220,8 @@
 Flyora delivers a responsive, category-driven shopping experience with secure user authentication, real-time product filtering, and a scalable backend. It supports both desktop and mobile users, with future plans for AI-powered recommendations and chatbot support.</p>
 <hr>
 <h3 id="3-solution-architecture">3. Solution Architecture</h3>
+<h4 id="-system-architecture-diagram">📄 System Architecture Diagram</h4>
+<p><img src="/images/SystemArch.drawio.png" alt="System Architecture Diagram"></p>
 <h4 id="-frontend-web-tier">🧩 Frontend (Web Tier)</h4>
 <ul>
 <li><strong>Amazon S3</strong>: Static web hosting for frontend assets</li>
@@ -227,14 +229,17 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 <li><strong>Responsive design</strong>: Mobile-friendly interface</li>
 </ul>
 <h4 id="-authentication--security">🔐 Authentication &amp; Security</h4>
+<h4 id="-authentication--security-1">🔐 Authentication &amp; Security</h4>
 <ul>
-<li><strong>Amazon Cognito</strong>: User authentication and authorization</li>
 <li><strong>IAM</strong>: Identity and access management</li>
-<li><strong>CloudWatch</strong>: Monitoring and security layer</li>
+<li><strong>CloudWatch &amp; AWS X-Ray</strong>: Monitoring and distributed tracing</li>
 </ul>
 <h4 id="-backend-services-app-tier">🔄 Backend Services (App Tier)</h4>
+<h4 id="technical-improvements">Technical Improvements:</h4>
 <ul>
-<li><strong>Amazon API Gateway</strong>: HTTP API management</li>
+<li>Responsive, mobile-friendly UI</li>
+<li>Secure user authentication and role management (IAM)</li>
+<li>Scalable backend with Lambda/API Gateway</li>
 <li><strong>AWS Lambda Functions</strong>:
 <ul>
 <li>Chatbot handler</li>
@@ -242,17 +247,17 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 <li>API handler</li>
 </ul>
 </li>
-<li><strong>Amazon Nova Lite (Bedrock)</strong>: AI-powered recommendations</li>
-<li><strong>Amazon OpenSearch</strong>: Advanced search capabilities</li>
+<li><strong>Amazon Bedrock</strong>: Embedding Model and LLM Model for AI-powered features</li>
 </ul>
 <h4 id="-data--storage-data-tier">📦 Data &amp; Storage (Data Tier)</h4>
 <ul>
-<li><strong>Amazon S3</strong>: Product images and static assets</li>
-<li><strong>DynamoDB</strong>: NoSQL database for product catalog</li>
+<li><strong>Amazon RDS for PostgreSQL</strong>: Relational database</li>
+<li><strong>DynamoDB</strong>: NoSQL database</li>
+<li><strong>Amazon S3</strong>: Data storage</li>
 </ul>
 <h4 id="-cicd--development">🔧 CI/CD &amp; Development</h4>
 <ul>
-<li><strong>GitLab</strong>: Version control and collaboration</li>
+<li><strong>GitLab</strong>:  Version control and CI/CD pipeline triggers</li>
 <li><strong>AWS CodeBuild</strong>: Automated build process</li>
 <li><strong>AWS CodePipeline</strong>: Continuous integration and deployment</li>
 </ul>
@@ -267,7 +272,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 <h4 id="month-1---aws-learning-focus">Month 1 - AWS Learning Focus:</h4>
 <ul>
 <li><strong>Week 1-2</strong>: AWS fundamentals (S3, Lambda, API Gateway, DynamoDB)</li>
-<li><strong>Week 3</strong>: Advanced services (Cognito, Bedrock, OpenSearch)</li>
+<li><strong>Week 3</strong>: Advanced services (Bedrock, OpenSearch)</li>
 <li><strong>Week 4</strong>: Architecture design and database modeling with MySQL Workbench</li>
 </ul>
 <h4 id="technical-requirements">Technical Requirements:</h4>
@@ -337,24 +342,19 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
           <td>$3.00</td>
       </tr>
       <tr>
-          <td>Amazon Cognito</td>
-          <td>$0.08</td>
-          <td>$0.96</td>
-      </tr>
-      <tr>
           <td>CloudWatch &amp; Logs</td>
           <td>$0.05</td>
           <td>$0.60</td>
       </tr>
       <tr>
-          <td>Amazon Bedrock (Nova)</td>
+          <td>Amazon Bedrock (Embedding/LLM)</td>
           <td>$0.10</td>
           <td>$1.20</td>
       </tr>
       <tr>
-          <td>OpenSearch Service</td>
-          <td>$0.15</td>
-          <td>$1.80</td>
+          <td>Amazon RDS for PostgreSQL</td>
+          <td>$0.20</td>
+          <td>$2.40</td>
       </tr>
       <tr>
           <td>CodePipeline/CodeBuild</td>
@@ -362,9 +362,14 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
           <td>$0.60</td>
       </tr>
       <tr>
+          <td>AWS X-Ray</td>
+          <td>$0.02</td>
+          <td>$0.24</td>
+      </tr>
+      <tr>
           <td><strong>Total Estimate</strong></td>
-          <td><strong>$0.89</strong></td>
-          <td><strong>$10.68</strong></td>
+          <td><strong>$0.96</strong></td>
+          <td><strong>$11.52</strong></td>
       </tr>
   </tbody>
 </table>
@@ -394,27 +399,35 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
           <td>Auto-scaling and proper partition key design</td>
       </tr>
       <tr>
+          <td>RDS downtime</td>
+          <td>Medium</td>
+          <td>Low</td>
+          <td>Multi-AZ deployment, automated backups</td>
+      </tr>
+      <tr>
           <td>Cost overruns</td>
           <td>Low</td>
           <td>Low</td>
           <td>Monitor with AWS Budgets and CloudWatch alerts</td>
       </tr>
       <tr>
-          <td>OpenSearch downtime</td>
+          <td>Bedrock API limits</td>
           <td>Medium</td>
           <td>Low</td>
-          <td>Implement fallback search with DynamoDB</td>
+          <td>Monitor usage, fallback to cached results</td>
       </tr>
   </tbody>
 </table>
 <hr>
 <h3 id="8-expected-outcomes">8. Expected Outcomes</h3>
-<h4 id="technical-improvements">Technical Improvements:</h4>
+<h4 id="technical-improvements-1">Technical Improvements:</h4>
 <ul>
-<li>Responsive, mobile-friendly UI</li>
-<li>Secure user authentication and role management</li>
-<li>Scalable backend with real-time product filtering</li>
-<li>Fast search and personalized recommendations (future)</li>
+<li>Responsive, mobile-friendly, UI/UX</li>
+<li>Secure user authentication and role management (IAM)</li>
+<li>Scalable backend with Lambda/API Gateway</li>
+<li>Real-time product filtering and chatbot support</li>
+<li>AI-powered features via Bedrock (Embedding/LLM)</li>
+<li>Robust data storage with RDS, DynamoDB, and S3</li>
 </ul>
 <h4 id="business-value">Business Value:</h4>
 <ul>
@@ -469,19 +482,19 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Proposal_Strangers/js/clipboard.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/perfect-scrollbar.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/perfect-scrollbar.jquery.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/jquery.sticky.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/featherlight.min.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/highlight.pack.js?1761299445"></script>
+    <script src="/Proposal_Strangers/js/clipboard.min.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/perfect-scrollbar.min.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/perfect-scrollbar.jquery.min.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/jquery.sticky.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/featherlight.min.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/highlight.pack.js?1764575683"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Proposal_Strangers/js/modernizr.custom-3.6.0.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/learn.js?1761299445"></script>
-    <script src="/Proposal_Strangers/js/hugo-learn.js?1761299445"></script>
+    <script src="/Proposal_Strangers/js/modernizr.custom-3.6.0.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/learn.js?1764575683"></script>
+    <script src="/Proposal_Strangers/js/hugo-learn.js?1764575683"></script>
 
-    <link href="/Proposal_Strangers/mermaid/mermaid.css?1761299445" rel="stylesheet" />
-    <script src="/Proposal_Strangers/mermaid/mermaid.js?1761299445"></script>
+    <link href="/Proposal_Strangers/mermaid/mermaid.css?1764575683" rel="stylesheet" />
+    <script src="/Proposal_Strangers/mermaid/mermaid.js?1764575683"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
