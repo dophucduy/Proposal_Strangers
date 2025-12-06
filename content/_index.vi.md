@@ -14,6 +14,8 @@ body, html {
 
 ## 🐦 Đề xuất: Flyora – Nền tảng Thương mại Điện tử cho Người yêu Chim
 
+📄 **[Tải Xuống Đề xuất PDF Đầy đủ](/Proposal%20FLYORA.pdf)**
+
 ### 1. Tóm tắt Điều hành
 Flyora là một ứng dụng web chuyên biệt được thiết kế để phục vụ những người đam mê chim cảnh trên khắp Việt Nam. Nền tảng cung cấp các sản phẩm được tuyển chọn như thức ăn chim, đồ chơi, lồng và phụ kiện trang trí phù hợp với các loài như Chào Mào, Vẹt, Yến Phụng và Chích Chòe. Được xây dựng với công nghệ web hiện đại và lưu trữ trên AWS, Flyora đảm bảo khả năng mở rộng, hiệu suất và truy cập an toàn. Nền tảng hướng tới trở thành điểm đến hàng đầu cho việc chăm sóc và trang trí chim, kết hợp thương mại điện tử với cá nhân hóa và tương tác cộng đồng.
 
