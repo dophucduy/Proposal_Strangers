@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dophucduy.github.io/Proposal_Strangers/</loc>
+    <loc>http://localhost:53778/Proposal_Strangers/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-vn"
-                href="https://dophucduy.github.io/Proposal_Strangers/vi/"
+                href="http://localhost:53778/Proposal_Strangers/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://dophucduy.github.io/Proposal_Strangers/"
+                href="http://localhost:53778/Proposal_Strangers/"
                 />
   </url><url>
-    <loc>https://dophucduy.github.io/Proposal_Strangers/categories/</loc>
+    <loc>http://localhost:53778/Proposal_Strangers/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-vn"
-                href="https://dophucduy.github.io/Proposal_Strangers/vi/categories/"
+                href="http://localhost:53778/Proposal_Strangers/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://dophucduy.github.io/Proposal_Strangers/categories/"
+                href="http://localhost:53778/Proposal_Strangers/categories/"
                 />
   </url><url>
-    <loc>https://dophucduy.github.io/Proposal_Strangers/tags/</loc>
+    <loc>http://localhost:53778/Proposal_Strangers/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-vn"
-                href="https://dophucduy.github.io/Proposal_Strangers/vi/tags/"
+                href="http://localhost:53778/Proposal_Strangers/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://dophucduy.github.io/Proposal_Strangers/tags/"
+                href="http://localhost:53778/Proposal_Strangers/tags/"
                 />
   </url>
 </urlset>

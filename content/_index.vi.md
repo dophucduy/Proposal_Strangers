@@ -94,22 +94,26 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 ---
 
-### 6. Ước tính Ngân sách
+### 6. Ước tính Chi phí
 
-| Mục                              | Chi phí Hàng tháng | Chi phí Hàng năm |
-|-----------------------------------|-------------------|------------------|
-| Amazon S3 + CloudFront            | $0.20             | $2.40            |
-| AWS Lambda                       | $0.00             | $0.00            |
-| Amazon API Gateway                | $0.01             | $0.12            |
-| DynamoDB                          | $0.25             | $3.00            |
-| CloudWatch & Logs                 | $0.05             | $0.60            |
-| Amazon Bedrock (Nhúng/LLM)        | $0.10             | $1.20            |
-| Amazon RDS for PostgreSQL         | $0.20             | $2.40            |
-| CodePipeline/CodeBuild            | $0.05             | $0.60            |
-| AWS X-Ray                         | $0.02             | $0.24            |
-| **Tổng Ước tính**                 | **$0.96**         | **$11.52**       |
+| Dịch vụ                          | Chi phí Hàng tháng | Chi phí Hàng năm | Chi tiết tính toán          |
+|-----------------------------------|-------------------|------------------|-----------------------------|
+| Amazon S3                         | $0.13             | $1.56            | - Lưu trữ: 5GB                |
+| AWS Lambda                        | $0.00             | $0.00            | - 10.000 request<br>- 512 MB Ephemeral storage<br>- 256 MB Memory<br>- Duration: 150ms |
+| Amazon API Gateway (REST API)     | $0.04             | $0.48            | - 10.000 request              |
+| DynamoDB (on-demand capacity)     | $0.01             | $0.12            | - Data storage size: 0.01 GB<br>- Number of writes: 0.01 million<br>- Number of reads: 0.02 million |
+| X-ray                             | $0.01             | $0.96            | - 10.000 request<br>- Sampling rate: 10%<br>- Traces retrieved per query: 20 |
+| CloudWatch & Logs                 | $0.00             | $0.00            |                             |
+| Amazon Bedrock (Embedding/LLM)    | $0.13             | $1.56            | - Cohere Embed Multilingual (83%), Claude 3 Haiku (17%)<br>- 3.000 request |
+| Amazon RDS for PostgreSQL         | $21.01            | $252.12          | - db.t4g.micro<br>- Storage: 20GB |
+| Data transfer                     | $0.00             | $0.00            | - Free tier: 1 GB              |
+| CloudFront                        | $0.11             | $1.32            | - 10.000 request<br>- Data Transfer Out: Free tier 1 GB (global) |
+| CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
+| CodeBuild      | $1.26        | $15.12       |- arm1.2xlarge <br> - 7 builds in a month <br> - Average build duration: 2 minutes|
+| VPC                               | $32.85            | $394.20          | - Hourly Charge: 24h<br>- Data Processing: 3.000 request |
+| **Tổng Ước tính**                 | **$55.55**        | **$667.44**      |                             |
 
-Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
+Lưu ý: Chi phí phần cứng không áp dụng do Flyora là nền tảng web hoàn toàn.
 
 ---
 

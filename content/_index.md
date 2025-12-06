@@ -36,15 +36,12 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 
 #### 🔐 Authentication & Security
-#### 🔐 Authentication & Security
+- **Amazon Cognito**: User authentication and authorization
 - **IAM**: Identity and access management
-- **CloudWatch & AWS X-Ray**: Monitoring and distributed tracing
+- **CloudWatch**: Monitoring and security layer
 
 #### 🔄 Backend Services (App Tier)
-#### Technical Improvements:
-- Responsive, mobile-friendly UI
-- Secure user authentication and role management (IAM)
-- Scalable backend with Lambda/API Gateway
+- **Amazon API Gateway**: HTTP API management
 - **AWS Lambda Functions**: 
   - Chatbot handler
   - Import automation
@@ -72,7 +69,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 #### Month 1 - AWS Learning Focus:
 - **Week 1-2**: AWS fundamentals (S3, Lambda, API Gateway, DynamoDB)
-- **Week 3**: Advanced services (Bedrock, OpenSearch)
+- **Week 3**: Advanced services (Cognito, Bedrock, OpenSearch)
 - **Week 4**: Architecture design and database modeling with MySQL Workbench
 
 #### Technical Requirements:
@@ -95,18 +92,22 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 6. Budget Estimation
 
-| Item                        | Monthly Cost | Annual Cost |
-|-----------------------------|--------------|-------------|
-| Amazon S3 + CloudFront      | $0.20        | $2.40       |
-| AWS Lambda                  | $0.00        | $0.00       |
-| Amazon API Gateway          | $0.01        | $0.12       |
-| DynamoDB                    | $0.25        | $3.00       |
-| CloudWatch & Logs           | $0.05        | $0.60       |
-| Amazon Bedrock (Embedding/LLM)| $0.10      | $1.20       |
-| Amazon RDS for PostgreSQL   | $0.20        | $2.40       |
-| CodePipeline/CodeBuild      | $0.05        | $0.60       |
-| AWS X-Ray                   | $0.02        | $0.24       |
-| **Total Estimate**          | **$0.96**    | **$11.52**  |
+| Item                        | Monthly Cost | Annual Cost |Detail Calculation|
+|-----------------------------|--------------|-------------|------------------|
+| Amazon S3       | $0.13        | $1.56       |- Storage: 5GB <br>|
+| AWS Lambda                  | $0.00        | $0.00       |- 10.000 request<br> - 512 MB Ephemeral storage <br> - 256 MB Memory <br>- Duration: 150ms|
+| Amazon API Gateway(REST API)          | $0.04        | $0.48       |10.000 request|
+| DynamoDB(DynamoDB on-demand capacity)                    | $0.01        | $0.12       |- Data storage size: 0.01 GB <br>- Number of writes: 0.01 million<br>- Number of reads 0.02 million |
+| X-ray              | $0.01        | $0.96       |- 10.000 request <br>0- Sampling rate: 10% <br> - Traces retrieved per query: 20|
+| CloudWatch & Logs           | $0.00        | $0.00       ||
+| Amazon Bedrock (Embedding/LLM)| $0.13      | $1.56       |- Cohere Embed Multilingual (83%), Claude 3 Haiku (17%)<br> - 3000 request|
+| Amazon RDS for PostgreSQL   | $21.01        | $252.12       | - db.t4g.micro<br> - Storage: 20GB|
+| Data transfer               | $0.00        | $0.00       | - Free tier: 1 GB|
+| CloudFront      | $0.11        | $1.32       |- 10000 requests<br> -Data Transfer Out: Free tier: 1 GB (global) |
+| CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
+| CodeBuild      | $1.26        | $15.12       |- arm1.2xlarge <br> - 7 builds in a month <br> - Average build duration: 2 minutes|
+| VPC      | $32.85        | $394.2       |Hourly Charge: 24h <br> Data Processing: 3000 request|
+| **Total Estimate**          | **$55.55**    | **$667.44**  ||
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 
@@ -128,7 +129,7 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 
 #### Technical Improvements:
 - Responsive, mobile-friendly, UI/UX
-- Secure user authentication and role management (IAM)
+- Secure user authentication and role management (Cognito, IAM)
 - Scalable backend with Lambda/API Gateway
 - Real-time product filtering and chatbot support
 - AI-powered features via Bedrock (Embedding/LLM)
