@@ -26,7 +26,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 3. Solution Architecture
 #### 📄 System Architecture Diagram
-![System Architecture Diagram](https://phucqb.sirv.com/Images/SystemArch.drawio.png)
+![System Architecture Diagram](https://phucqb.sirv.com/Images/4a27331b2b7fa421fd6e.jpg)
 
 #### 🧩 Frontend (Web Tier)
 - **Amazon S3**: Static web hosting for frontend assets
@@ -36,12 +36,15 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 
 #### 🔐 Authentication & Security
-- **Amazon Cognito**: User authentication and authorization
+#### 🔐 Authentication & Security
 - **IAM**: Identity and access management
-- **CloudWatch**: Monitoring and security layer
+- **CloudWatch & AWS X-Ray**: Monitoring and distributed tracing
 
 #### 🔄 Backend Services (App Tier)
-- **Amazon API Gateway**: HTTP API management
+#### Technical Improvements:
+- Responsive, mobile-friendly UI
+- Secure user authentication and role management (IAM)
+- Scalable backend with Lambda/API Gateway
 - **AWS Lambda Functions**: 
   - Chatbot handler
   - Import automation
@@ -69,7 +72,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 #### Month 1 - AWS Learning Focus:
 - **Week 1-2**: AWS fundamentals (S3, Lambda, API Gateway, DynamoDB)
-- **Week 3**: Advanced services (Cognito, Bedrock, OpenSearch)
+- **Week 3**: Advanced services (Bedrock, OpenSearch)
 - **Week 4**: Architecture design and database modeling with MySQL Workbench
 
 #### Technical Requirements:
@@ -129,7 +132,7 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 
 #### Technical Improvements:
 - Responsive, mobile-friendly, UI/UX
-- Secure user authentication and role management (Cognito, IAM)
+- Secure user authentication and role management (IAM)
 - Scalable backend with Lambda/API Gateway
 - Real-time product filtering and chatbot support
 - AI-powered features via Bedrock (Embedding/LLM)
