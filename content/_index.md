@@ -33,9 +33,6 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 - **CloudFront**: CDN for global content delivery
 - **Responsive design**: Mobile-friendly interface
 
-
-
-#### 🔐 Authentication & Security
 #### 🔐 Authentication & Security
 - **IAM**: Identity and access management
 - **CloudWatch & AWS X-Ray**: Monitoring and distributed tracing
