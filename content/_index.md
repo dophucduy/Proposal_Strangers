@@ -107,7 +107,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 | CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
 | CodeBuild      | $1.26        | $15.12       |- arm1.2xlarge <br> - 7 builds in a month <br> - Average build duration: 2 minutes|
 | VPC      | $32.85        | $394.2       |Hourly Charge: 24h <br> Data Processing: 3000 request|
-| **Total Estimate**          | **$54.34**    | **$652.92**  ||
+| **Total Estimate**          | **$55.55**    | **$667.44**  ||
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 
