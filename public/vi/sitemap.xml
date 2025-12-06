@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:60809/Proposal_Strangers/vi/</loc>
+    <loc>https://dophucduy.github.io/Proposal_Strangers/vi/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:60809/Proposal_Strangers/"
+                href="https://dophucduy.github.io/Proposal_Strangers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-vn"
-                href="http://localhost:60809/Proposal_Strangers/vi/"
+                href="https://dophucduy.github.io/Proposal_Strangers/vi/"
                 />
   </url><url>
-    <loc>http://localhost:60809/Proposal_Strangers/vi/categories/</loc>
+    <loc>https://dophucduy.github.io/Proposal_Strangers/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:60809/Proposal_Strangers/categories/"
+                href="https://dophucduy.github.io/Proposal_Strangers/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-vn"
-                href="http://localhost:60809/Proposal_Strangers/vi/categories/"
+                href="https://dophucduy.github.io/Proposal_Strangers/vi/categories/"
                 />
   </url><url>
-    <loc>http://localhost:60809/Proposal_Strangers/vi/tags/</loc>
+    <loc>https://dophucduy.github.io/Proposal_Strangers/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:60809/Proposal_Strangers/tags/"
+                href="https://dophucduy.github.io/Proposal_Strangers/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi-vn"
-                href="http://localhost:60809/Proposal_Strangers/vi/tags/"
+                href="https://dophucduy.github.io/Proposal_Strangers/vi/tags/"
                 />
   </url>
 </urlset>
