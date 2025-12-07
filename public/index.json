@@ -1,0 +1,43 @@
+[
+{
+	"uri": "http://localhost:57469/",
+	"title": "Internship Report",
+	"tags": [],
+	"description": "",
+	"content": "Internship Report ⚠️ Note: The information below is for reference purposes only. Please do not copy verbatim for your report, including this warning.\nStudent Information: Full Name: Do Phuc Duy Phone Number: 0934821517 Email: doychannel1802@gmail.com University: FPT University Major: Software Engineering Class: Internship Company: Amazon Web Services Vietnam Co., Ltd. Internship Position: FCJ Cloud Intern Internship Duration: From 7/09/2025 to 12/11/2025 Report Content Worklog Detailed weekly activities and learning progress during the internship period\nProposal Internship project proposals and technical documentation\nTranslated Blogs Technical blog translations and knowledge sharing content\nEvents Participated Workshops, seminars, and training sessions attended\nWorkshop Hands-on technical workshops and practical exercises\nSelf-evaluation Personal assessment and reflection on learning outcomes\nSharing and Feedback Knowledge sharing sessions and feedback from mentors\n"
+},
+{
+	"uri": "http://localhost:57469/events/event1/",
+	"title": "Event 1",
+	"tags": [],
+	"description": "",
+	"content": "Event 1 :: Internship Report ⚠️ Disclaimer The information below is for reference purposes only. Please do not copy verbatim for your report, including this warning.\n📝 Event Report \u0026ldquo;GenAI-powered App-DB Modernization workshop\u0026rdquo; 🎯 Purpose of the Event 🎤 Speakers List 📚 Key Highlights 🧱 Microservice Architecture 🧠 Domain-Driven Design (DDD) 🔄 Event-Driven Architecture 🧮 Compute Evolution 🤖 Amazon Q Developer 🧠 Lessons Learned Design Thinking Technical Architecture Modernization Strategy 🛠️ Practical Applications 🌟 Personal Experience \u0026amp; Reflections 🖼️ Event Photos "
+},
+{
+	"uri": "http://localhost:57469/worklog/",
+	"title": "Worklog",
+	"tags": [],
+	"description": "",
+	"content": "Worklog Weekly activities and learning progress during the internship period.\nWeekly Schedule Week 1: Foundations\nIntroduction to AWS Cloud AWS Account Setup and IAM Basics Event: AWS Fundamentals Workshop Week 2: Compute Services\nEC2 Instances and Auto Scaling Lambda Functions Event: Hands-on EC2 Lab Session Week 3: Storage \u0026amp; Databases\nS3 and EBS Storage Solutions RDS and DynamoDB Event: Database Migration Workshop Week 4: Networking \u0026amp; Security\nVPC, Subnets, and Security Groups CloudFront and Route 53 Event: Security Best Practices Seminar Week 5: Monitoring \u0026amp; Management\nCloudWatch and CloudTrail Systems Manager Event: DevOps Tools Deep Dive Week 6: Advanced Topics\nServerless Architecture Container Services (ECS/EKS) Event: Capstone Project Presentations "
+},
+{
+	"uri": "http://localhost:57469/events/",
+	"title": "Events Participated",
+	"tags": [],
+	"description": "",
+	"content": "Events Participated ⚠️ Note: The information below is for reference purposes only. Please do not copy verbatim for your report, including this warning.\nIn this section, you need to list and describe in detail the events that you participated in throughout your internship or work period.\nEach event should be presented in the format Event 1, Event 2, Event 3\u0026hellip;, along with the following information:\nEvent name Event time Location (if any) Your role in the event (participant, organizing support, speaker, etc.) Brief description of content and main activities in the event Results or value achieved (lessons learned, new skills, contributions to team/project) This listing helps clearly demonstrate your actual participation, as well as the soft skills and experience you have accumulated through each event.\nDuring the internship period, I participated in 2 events, with each event being a memorable experience with new, interesting and useful knowledge, along with gifts and wonderful moments.\nEvent 1 Event Name: AWS Certification Bootcamp Time: 09:00 on February 15, 2024 Location: 26th Floor, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City Role in Event: Participant Description: Intensive 2-day bootcamp focused on AWS Solutions Architect Associate certification Outcomes: Gained deep knowledge of core AWS services and prepared well for certification exam Event 2 Event Name: Cloud Migration Summit Time: 14:00 on March 8, 2024 Location: AWS Vietnam Office, District 1, Ho Chi Minh City Role in Event: Participant Description: Full-day conference on enterprise cloud migration strategies Outcomes: Enhanced understanding of migration assessment tools and cost optimization techniques "
+},
+{
+	"uri": "http://localhost:57469/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:57469/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

@@ -1,0 +1,78 @@
+[
+{
+	"uri": "http://localhost:56785/vi/",
+	"title": "Báo Cáo Thực Tập",
+	"tags": [],
+	"description": "",
+	"content": "Báo Cáo Thực Tập ⚠️ Lưu ý: Thông tin dưới đây chỉ mang tính chất tham khảo. Vui lòng không sao chép nguyên văn cho báo cáo của bạn, bao gồm cả cảnh báo này.\nThông Tin Sinh Viên: Họ và Tên: Nguyễn Văn A Số Điện Thoại: 0989888999 Email: Anguyenvan@gmail.com Trường Đại Học: Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh Chuyên Ngành: Công nghệ Thông tin Lớp: AWS082025 Công Ty Thực Tập: Amazon Web Services Vietnam Co., Ltd. Vị Trí Thực Tập: FCJ Cloud Intern Thời Gian Thực Tập: Từ 12/08/2025 đến 12/11/2025 Nội Dung Báo Cáo Nhật Ký Công Việc Chi tiết hoạt động hàng tuần và tiến độ học tập trong thời gian thực tập\nĐề Xuất Đề xuất dự án thực tập và tài liệu kỹ thuật\nBlog Dịch Thuật Nội dung dịch thuật blog kỹ thuật và chia sẻ kiến thức\nSự Kiện Tham Gia Workshop, hội thảo và các buổi đào tạo đã tham gia\nWorkshop Workshop kỹ thuật thực hành và bài tập thực tế\nTự Đánh Giá Đánh giá cá nhân và phản tư về kết quả học tập\nChia Sẻ và Phản Hồi Buổi chia sẻ kiến thức và phản hồi từ mentor\n"
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/",
+	"title": "Nhật Ký Công Việc",
+	"tags": [],
+	"description": "",
+	"content": "Nhật Ký Công Việc Hoạt động hàng tuần và tiến độ học tập trong thời gian thực tập.\nLịch Trình Hàng Tuần Tuần 1: Nền Tảng\nGiới thiệu AWS Cloud Thiết lập Tài khoản AWS và Cơ bản IAM Sự kiện: Workshop Cơ bản AWS Tuần 2: Dịch Vụ Tính Toán\nEC2 Instances và Auto Scaling Lambda Functions Sự kiện: Phiên Thực hành EC2 Tuần 3: Lưu Trữ \u0026amp; Cơ Sở Dữ Liệu\nGiải pháp Lưu trữ S3 và EBS RDS và DynamoDB Sự kiện: Workshop Di chuyển Database Tuần 4: Mạng \u0026amp; Bảo Mật\nVPC, Subnets và Security Groups CloudFront và Route 53 Sự kiện: Hội thảo Thực hành Bảo mật Tốt nhất Tuần 5: Giám Sát \u0026amp; Quản Lý\nCloudWatch và CloudTrail Systems Manager Sự kiện: Tìm hiểu Sâu Công cụ DevOps Tuần 6: Chủ Đề Nâng Cao\nKiến trúc Serverless Dịch vụ Container (ECS/EKS) Sự kiện: Thuyết trình Dự án Capstone "
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/week1/",
+	"title": "Tuần 1: Nền Tảng",
+	"tags": [],
+	"description": "",
+	"content": "Tuần 1: Nền Tảng AWS Mục Tiêu Tuần 1 Hiểu các khái niệm cơ bản về điện toán đám mây Thiết lập tài khoản AWS và thanh toán Thành thạo người dùng, nhóm và chính sách IAM Điều hướng AWS Management Console Nhiệm vụ cần thực hiện: Ngày Nhiệm vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo (Link) 1 Thiết lập Tài khoản AWS Tuần 1, Ngày 1 Tuần 1, Ngày 1 Hướng Dẫn Bắt Đầu AWS 2 Cơ bản Điện toán Đám mây Tuần 1, Ngày 2 Tuần 1, Ngày 2 Điện toán Đám mây là gì 3 Thiết lập IAM Users và Groups Tuần 1, Ngày 3 Tuần 1, Ngày 3 Hướng Dẫn IAM 4 Cấu hình IAM Policies Tuần 1, Ngày 4 Tuần 1, Ngày 4 Thực Hành Tốt Nhất IAM 5 Điều hướng AWS Console Tuần 1, Ngày 5 Tuần 1, Ngày 5 AWS Management Console 6 Workshop Cơ bản AWS Tuần 1, Ngày 6 Tuần 1, Ngày 6 Tài liệu Workshop 7 Ôn tập và Đánh giá Tuần Tuần 1, Ngày 7 Tuần 1, Ngày 7 Kịch bản Thực hành Thành tựu Tuần 1 ✅ Tạo và cấu hình tài khoản AWS thành công ✅ Triển khai cấu trúc bảo mật IAM phù hợp ✅ Thành thạo điều hướng AWS Management Console ✅ Hoàn thành các bài tập workshop thực hành ✅ Thiết lập nền tảng cho việc học AWS nâng cao "
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/week2/",
+	"title": "Tuần 2: Dịch Vụ Tính Toán",
+	"tags": [],
+	"description": "",
+	"content": "Tuần 2: Dịch Vụ Tính Toán AWS Mục Tiêu Tuần 2 Khởi chạy và quản lý EC2 instances Cấu hình Auto Scaling groups Tạo và triển khai Lambda functions Hiểu mô hình giá tính toán Nhiệm vụ cần thực hiện: Ngày Nhiệm vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo (Link) 1 Nghiên cứu Loại EC2 Instance Tuần 2, Ngày 1 Tuần 2, Ngày 1 Loại EC2 Instance 2 Khởi chạy EC2 Instance đầu tiên Tuần 2, Ngày 2 Tuần 2, Ngày 2 Hướng Dẫn EC2 3 Cấu hình Security Groups Tuần 2, Ngày 3 Tuần 2, Ngày 3 EC2 Security Groups 4 Thiết lập Auto Scaling Tuần 2, Ngày 4 Tuần 2, Ngày 4 Hướng Dẫn Auto Scaling 5 Tạo Lambda Function Tuần 2, Ngày 5 Tuần 2, Ngày 5 Hướng Dẫn Lambda 6 Phiên Thực hành EC2 Tuần 2, Ngày 6 Tuần 2, Ngày 6 Hướng dẫn Thực hành 7 Đánh giá Dịch vụ Tính toán Tuần 2, Ngày 7 Tuần 2, Ngày 7 Kịch bản Thực hành Thành tựu Tuần 2 ✅ Khởi chạy và cấu hình EC2 instances thành công ✅ Triển khai Auto Scaling cho tính khả dụng cao ✅ Tạo và triển khai Lambda functions serverless ✅ Thành thạo tối ưu giá dịch vụ tính toán ✅ Hoàn thành bài thực hành với kịch bản thực tế "
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/week3/",
+	"title": "Tuần 3: Lưu Trữ &amp; Cơ Sở Dữ Liệu",
+	"tags": [],
+	"description": "",
+	"content": "Tuần 3: Lưu Trữ \u0026amp; Cơ Sở Dữ Liệu Mục Tiêu Tuần 3 Triển khai giải pháp lưu trữ S3 Cấu hình EBS volumes Thiết lập cơ sở dữ liệu RDS Làm việc với DynamoDB NoSQL Nhiệm vụ cần thực hiện: Ngày Nhiệm vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo (Link) 1 Tạo và Cấu hình S3 Bucket Tuần 3, Ngày 1 Tuần 3, Ngày 1 Hướng Dẫn S3 2 S3 Storage Classes và Lifecycle Tuần 3, Ngày 2 Tuần 3, Ngày 2 S3 Storage Classes 3 Quản lý EBS Volume Tuần 3, Ngày 3 Tuần 3, Ngày 3 Hướng Dẫn EBS 4 Thiết lập RDS Database Tuần 3, Ngày 4 Tuần 3, Ngày 4 Hướng Dẫn RDS 5 Thiết kế DynamoDB Table Tuần 3, Ngày 5 Tuần 3, Ngày 5 Hướng Dẫn DynamoDB 6 Workshop Di chuyển Database Tuần 3, Ngày 6 Tuần 3, Ngày 6 Tài liệu Workshop 7 Đánh giá Lưu trữ và Database Tuần 3, Ngày 7 Tuần 3, Ngày 7 Kịch bản Thực hành Thành tựu Tuần 3 ✅ Cấu hình S3 buckets với chính sách bảo mật và lifecycle phù hợp ✅ Triển khai giải pháp EBS storage với mã hóa và backup ✅ Triển khai RDS databases với Multi-AZ và read replicas ✅ Thiết kế bảng DynamoDB hiệu quả với indexing phù hợp ✅ Hoàn thành kịch bản di chuyển database thành công "
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/week4/",
+	"title": "Tuần 4: Mạng &amp; Bảo Mật",
+	"tags": [],
+	"description": "",
+	"content": "Tuần 4: Mạng \u0026amp; Bảo Mật Mục Tiêu Tuần 4 Thiết kế kiến trúc VPC Cấu hình security groups và NACLs Triển khai CloudFront distributions Thiết lập Route 53 DNS Nhiệm vụ cần thực hiện: Ngày Nhiệm vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo (Link) 1 Thiết kế Kiến trúc VPC Tuần 4, Ngày 1 Tuần 4, Ngày 1 Hướng Dẫn VPC 2 Thiết lập Subnets và Route Tables Tuần 4, Ngày 2 Tuần 4, Ngày 2 VPC Subnets 3 Cấu hình Security Groups và NACLs Tuần 4, Ngày 3 Tuần 4, Ngày 3 Security Groups 4 Thiết lập CloudFront Distribution Tuần 4, Ngày 4 Tuần 4, Ngày 4 Hướng Dẫn CloudFront 5 Cấu hình Route 53 DNS Tuần 4, Ngày 5 Tuần 4, Ngày 5 Hướng Dẫn Route 53 6 Hội thảo Thực hành Bảo mật Tốt nhất Tuần 4, Ngày 6 Tuần 4, Ngày 6 Tài liệu Hội thảo 7 Đánh giá Mạng và Bảo mật Tuần 4, Ngày 7 Tuần 4, Ngày 7 Nghiên cứu Tình huống Thành tựu Tuần 4 ✅ Thiết kế và triển khai kiến trúc VPC bảo mật ✅ Cấu hình bảo mật mạng phù hợp với Security Groups và NACLs ✅ Triển khai CloudFront CDN cho phân phối nội dung toàn cầu ✅ Thiết lập Route 53 DNS với health checks và routing policies ✅ Thành thạo thực hành tốt nhất bảo mật mạng và khắc phục sự cố "
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/week5/",
+	"title": "Tuần 5: Giám Sát &amp; Quản Lý",
+	"tags": [],
+	"description": "",
+	"content": "Tuần 5: Giám Sát \u0026amp; Quản Lý Mục Tiêu Tuần 5 Thiết lập giám sát CloudWatch Cấu hình logging CloudTrail Sử dụng công cụ Systems Manager Triển khai phản hồi tự động Nhiệm vụ cần thực hiện: Ngày Nhiệm vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo (Link) 1 Thiết lập CloudWatch Metrics và Alarms Tuần 5, Ngày 1 Tuần 5, Ngày 1 Hướng Dẫn CloudWatch 2 Tạo CloudWatch Dashboards Tuần 5, Ngày 2 Tuần 5, Ngày 2 CloudWatch Dashboards 3 Cấu hình CloudTrail Tuần 5, Ngày 3 Tuần 5, Ngày 3 Hướng Dẫn CloudTrail 4 Triển khai Công cụ Systems Manager Tuần 5, Ngày 4 Tuần 5, Ngày 4 Hướng Dẫn Systems Manager 5 CloudFormation Templates Tuần 5, Ngày 5 Tuần 5, Ngày 5 Hướng Dẫn CloudFormation 6 Tìm hiểu Sâu Công cụ DevOps Tuần 5, Ngày 6 Tuần 5, Ngày 6 Tài liệu Phiên 7 Đánh giá Giám sát và Quản lý Tuần 5, Ngày 7 Tuần 5, Ngày 7 Kịch bản Tự động hóa Thành tựu Tuần 5 ✅ Triển khai giám sát và cảnh báo CloudWatch toàn diện ✅ Cấu hình CloudTrail cho audit logging hoàn chỉnh ✅ Thành thạo công cụ Systems Manager cho quản lý hạ tầng ✅ Tạo Infrastructure as Code với CloudFormation ✅ Thiết lập quy trình DevOps tự động và tối ưu chi phí "
+},
+{
+	"uri": "http://localhost:56785/vi/worklog/week6/",
+	"title": "Tuần 6: Chủ Đề Nâng Cao",
+	"tags": [],
+	"description": "",
+	"content": "Tuần 6: Chủ Đề Nâng Cao Mục Tiêu Tuần 6 Thiết kế kiến trúc serverless Triển khai ứng dụng container Triển khai mẫu microservices Trình bày dự án capstone Nhiệm vụ cần thực hiện: Ngày Nhiệm vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo (Link) 1 Thiết kế Kiến trúc Serverless Tuần 6, Ngày 1 Tuần 6, Ngày 1 Serverless Application Lens 2 Tích hợp API Gateway và Lambda Tuần 6, Ngày 2 Tuần 6, Ngày 2 Hướng Dẫn API Gateway 3 Dịch vụ Container với ECS/EKS Tuần 6, Ngày 3 Tuần 6, Ngày 3 Hướng Dẫn ECS 4 Phát triển Dự án Capstone Tuần 6, Ngày 4 Tuần 6, Ngày 4 Templates Dự án 5 Đánh giá Kiến trúc và Kiểm thử Tuần 6, Ngày 5 Tuần 6, Ngày 5 Hướng Dẫn EKS 6 Thuyết trình Dự án Capstone Tuần 6, Ngày 6 Tuần 6, Ngày 6 Hướng dẫn Thuyết trình 7 Hoàn thành Chương trình và Chứng chỉ Tuần 6, Ngày 7 Tuần 6, Ngày 7 Tài liệu Tốt nghiệp Thành tựu Tuần 6 ✅ Thiết kế và triển khai kiến trúc serverless với thực hành tốt nhất ✅ Triển khai thành công ứng dụng container sử dụng ECS/EKS ✅ Tạo dự án capstone toàn diện thể hiện sự thành thạo AWS ✅ Trình bày giải pháp kỹ thuật với tài liệu phù hợp ✅ Hoàn thành hành trình học AWS với kỹ năng sẵn sàng cho ngành "
+},
+{
+	"uri": "http://localhost:56785/vi/events/",
+	"title": "Các Events Đã Tham Gia",
+	"tags": [],
+	"description": "",
+	"content": "Các Events Đã Tham Gia ⚠️ Lưu ý:\nEvent 1 Tên sự kiện: AWS Certification Bootcamp Thời gian: 09:00 ngày 15/02/2024 Địa điểm: Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh Vai trò trong sự kiện: Người tham dự Mô tả: Bootcamp tập trung 2 ngày về chứng chỉ AWS Solutions Architect Associate Kết quả đạt được: Thu được kiến thức sâu về các dịch vụ AWS cốt lõi và chuẩn bị tốt cho kỳ thi chứng chỉ Event 2 Tên sự kiện: Cloud Migration Summit Thời gian: 14:00 ngày 08/03/2024 Địa điểm: Văn phòng AWS Vietnam, Quận 1, thành phố Hồ Chí Minh Vai trò trong sự kiện: Người tham dự Mô tả: Hội nghị toàn ngày về chiến lược di chuyển doanh nghiệp lên cloud Kết quả đạt được: Nâng cao hiểu biết về công cụ đánh giá di chuyển và kỹ thuật tối ưu chi phí "
+},
+{
+	"uri": "http://localhost:56785/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:56785/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

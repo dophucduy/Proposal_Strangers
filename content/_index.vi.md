@@ -14,6 +14,8 @@ body, html {
 
 ## 🐦 Đề xuất: Flyora – Nền tảng Thương mại Điện tử cho Người yêu Chim
 
+📄 **[Tải Xuống Đề xuất PDF Đầy đủ](/Proposal%20FLYORA.pdf)**
+
 ### 1. Tóm tắt Điều hành
 Flyora là một ứng dụng web chuyên biệt được thiết kế để phục vụ những người đam mê chim cảnh trên khắp Việt Nam. Nền tảng cung cấp các sản phẩm được tuyển chọn như thức ăn chim, đồ chơi, lồng và phụ kiện trang trí phù hợp với các loài như Chào Mào, Vẹt, Yến Phụng và Chích Chòe. Được xây dựng với công nghệ web hiện đại và lưu trữ trên AWS, Flyora đảm bảo khả năng mở rộng, hiệu suất và truy cập an toàn. Nền tảng hướng tới trở thành điểm đến hàng đầu cho việc chăm sóc và trang trí chim, kết hợp thương mại điện tử với cá nhân hóa và tương tác cộng đồng.
 
@@ -41,9 +43,8 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 * **Thiết kế đáp ứng**: Giao diện thân thiện với di động
 
 #### 🔐 Xác thực & Bảo mật
-* **Amazon Cognito**: Xác thực và ủy quyền người dùng
 * **IAM**: Quản lý danh tính và truy cập
-* **CloudWatch**: Giám sát và lớp bảo mật
+* **CloudWatch & AWS X-Ray**: Giám sát và theo dõi phân tán
 
 #### 🔄 Dịch vụ Backend (Tầng Ứng dụng)
 * **Amazon API Gateway**: Quản lý API RESTful
@@ -74,7 +75,7 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 #### Tháng 1 - Tập trung Học AWS:
 - **Tuần 1-2**: Cơ bản AWS (S3, Lambda, API Gateway, DynamoDB)
-- **Tuần 3**: Dịch vụ nâng cao (Cognito, Bedrock, OpenSearch)
+- **Tuần 3**: Dịch vụ nâng cao (Bedrock, OpenSearch)
 - **Tuần 4**: Thiết kế kiến trúc và mô hình hóa cơ sở dữ liệu với MySQL Workbench
 
 #### Yêu cầu Kỹ thuật:
@@ -95,7 +96,7 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 ---
 
-### 6. Ước tính Ngân sách
+### 6. Ước tính Chi phí
 
 | Mục                                            | Chi phí Hàng tháng | Chi phí Hàng năm |
 |-------------------------------------------------|-------------------|------------------|
@@ -114,7 +115,7 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 | Amazon VPC (Mạng riêng ảo)                       | $43.07            | $516.84          |
 | **Tổng Ước tính**                                | **$70.39**        | **$844.68**      |
 
-Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
+Lưu ý: Chi phí phần cứng không áp dụng do Flyora là nền tảng web hoàn toàn.
 
 ---
 
@@ -133,9 +134,9 @@ Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 ### 8. Kết quả Mong đợi
 
 #### Cải tiến Kỹ thuật:
-- Giao diện người dùng đáp ứng, thân thiện với di động
-- Xác thực người dùng an toàn và quản lý vai trò (Cognito, IAM)
-- Backend có thể mở rộng với Lambda/API Gateway
+* Giao diện người dùng đáp ứng, thân thiện với di động
+* Xác thực người dùng an toàn và quản lý vai trò (IAM)
+* Backend có thể mở rộng với Lambda/API Gateway
 - Lọc sản phẩm thời gian thực và hỗ trợ chatbot
 - Tính năng AI qua Bedrock (Nhúng/LLM)
 - Lưu trữ dữ liệu mạnh mẽ với RDS, DynamoDB, S3

@@ -12,22 +12,22 @@
     <title>Strangers_Proposal :: Flyora - Bird E-commerce Proposal</title>
 
     
-    <link href="/Proposal_Strangers/css/nucleus.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/fontawesome-all.min.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/hybrid.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/featherlight.min.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/perfect-scrollbar.min.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/auto-complete.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/atom-one-dark-reasonable.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/theme.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/tabs.css?1765086637" rel="stylesheet">
-    <link href="/Proposal_Strangers/css/hugo-theme.css?1765086637" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/nucleus.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/fontawesome-all.min.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/hybrid.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/featherlight.min.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/perfect-scrollbar.min.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/auto-complete.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/atom-one-dark-reasonable.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/theme.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/tabs.css?1765086832" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/hugo-theme.css?1765086832" rel="stylesheet">
     
-    <link href="/Proposal_Strangers/css/theme-blue.css?1765086637" rel="stylesheet">
+    <link href="/Proposal_Strangers/css/theme-blue.css?1765086832" rel="stylesheet">
     
     
 
-    <script src="/Proposal_Strangers/js/jquery-3.3.1.min.js?1765086637"></script>
+    <script src="/Proposal_Strangers/js/jquery-3.3.1.min.js?1765086832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/Proposal_Strangers/js/lunr.min.js?1765086637"></script>
-<script type="text/javascript" src="/Proposal_Strangers/js/auto-complete.js?1765086637"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/lunr.min.js?1765086832"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/auto-complete.js?1765086832"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/Proposal_Strangers\/";
     
 </script>
-<script type="text/javascript" src="/Proposal_Strangers/js/search.js?1765086637"></script>
+<script type="text/javascript" src="/Proposal_Strangers/js/search.js?1765086832"></script>
     
   </div>
   
@@ -213,6 +213,7 @@
 
  
 <h2 id="-proposal-flyora--e-commerce-platform-for-bird-lovers">🐦 Proposal: Flyora – E-commerce Platform for Bird Lovers</h2>
+<p>📄 <strong><a href="/Proposal_Strangers/Proposal%20FLYORA.pdf">Download Full Proposal PDF</a></strong></p>
 <h3 id="1-executive-summary">1. Executive Summary</h3>
 <p>Flyora is a specialized web application designed to serve bird enthusiasts across Vietnam. It offers curated products such as bird food, toys, cages, and decorative accessories tailored to species like Chào Mào, Vẹt, Yến Phụng, and Chích Chòe. Built with modern web technologies and hosted on AWS, Flyora ensures scalability, performance, and secure access. The platform aims to become the go-to destination for bird care and ornamentation, combining e-commerce with personalization and community engagement.</p>
 <hr>
@@ -238,13 +239,15 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 </ul>
 <h4 id="-authentication--security">🔐 Authentication &amp; Security</h4>
 <ul>
-<li><strong>Amazon Cognito</strong>: User authentication and authorization</li>
 <li><strong>IAM</strong>: Identity and access management</li>
-<li><strong>CloudWatch</strong>: Monitoring and security layer</li>
+<li><strong>CloudWatch &amp; AWS X-Ray</strong>: Monitoring and distributed tracing</li>
 </ul>
 <h4 id="-backend-services-app-tier">🔄 Backend Services (App Tier)</h4>
+<h4 id="technical-improvements">Technical Improvements:</h4>
 <ul>
-<li><strong>Amazon API Gateway</strong>: HTTP API management</li>
+<li>Responsive, mobile-friendly UI</li>
+<li>Secure user authentication and role management (IAM)</li>
+<li>Scalable backend with Lambda/API Gateway</li>
 <li><strong>AWS Lambda Functions</strong>:
 <ul>
 <li>Chatbot handler</li>
@@ -277,7 +280,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 <h4 id="month-1---aws-learning-focus">Month 1 - AWS Learning Focus:</h4>
 <ul>
 <li><strong>Week 1-2</strong>: AWS fundamentals (S3, Lambda, API Gateway, DynamoDB)</li>
-<li><strong>Week 3</strong>: Advanced services (Cognito, Bedrock, OpenSearch)</li>
+<li><strong>Week 3</strong>: Advanced services (Bedrock, OpenSearch)</li>
 <li><strong>Week 4</strong>: Architecture design and database modeling with MySQL Workbench</li>
 </ul>
 <h4 id="technical-requirements">Technical Requirements:</h4>
@@ -396,6 +399,86 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
           <td><strong>$70.39</strong></td>
           <td><strong>$844.68</strong></td>
       </tr>
+      <tr>
+          <td>Item</td>
+          <td>Monthly Cost</td>
+          <td>Annual Cost</td>
+      </tr>
+      <tr>
+          <td>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</td>
+          <td>&mdash;&mdash;&mdash;&mdash;&ndash;</td>
+          <td>&mdash;&mdash;&mdash;&mdash;-</td>
+      </tr>
+      <tr>
+          <td>Amazon S3</td>
+          <td>$0.15</td>
+          <td>$1.8</td>
+      </tr>
+      <tr>
+          <td>AWS Lambda</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+      </tr>
+      <tr>
+          <td>Amazon API Gateway (REST API)</td>
+          <td>$0.04</td>
+          <td>$0.48</td>
+      </tr>
+      <tr>
+          <td>DynamoDB (on-demand capacity)</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+      </tr>
+      <tr>
+          <td>X-ray</td>
+          <td>$0.01</td>
+          <td>$0.12</td>
+      </tr>
+      <tr>
+          <td>CloudWatch &amp; Logs</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+      </tr>
+      <tr>
+          <td>Amazon Bedrock (Embedding/LLM)</td>
+          <td>$3.49</td>
+          <td>$41.88</td>
+      </tr>
+      <tr>
+          <td>Amazon RDS for PostgreSQL</td>
+          <td>$21.01</td>
+          <td>$252.12</td>
+      </tr>
+      <tr>
+          <td>Data transfer</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+      </tr>
+      <tr>
+          <td>CloudFront</td>
+          <td>$0.10</td>
+          <td>$1.2</td>
+      </tr>
+      <tr>
+          <td>CodePipeline</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+      </tr>
+      <tr>
+          <td>CodeBuild</td>
+          <td>$2.52</td>
+          <td>$30.24</td>
+      </tr>
+      <tr>
+          <td>VPC</td>
+          <td>$43.07</td>
+          <td>$516.84</td>
+      </tr>
+      <tr>
+          <td><strong>Total Estimate</strong></td>
+          <td><strong>$70.39</strong></td>
+          <td><strong>$844.68</strong></td>
+      </tr>
   </tbody>
 </table>
 <p>Hardware costs are not applicable as Flyora is a web-only platform.</p>
@@ -445,10 +528,10 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 </table>
 <hr>
 <h3 id="8-expected-outcomes">8. Expected Outcomes</h3>
-<h4 id="technical-improvements">Technical Improvements:</h4>
+<h4 id="technical-improvements-1">Technical Improvements:</h4>
 <ul>
 <li>Responsive, mobile-friendly, UI/UX</li>
-<li>Secure user authentication and role management (Cognito, IAM)</li>
+<li>Secure user authentication and role management (IAM)</li>
 <li>Scalable backend with Lambda/API Gateway</li>
 <li>Real-time product filtering and chatbot support</li>
 <li>AI-powered features via Bedrock (Embedding/LLM)</li>
@@ -507,19 +590,19 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/Proposal_Strangers/js/clipboard.min.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/perfect-scrollbar.min.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/perfect-scrollbar.jquery.min.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/jquery.sticky.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/featherlight.min.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/highlight.pack.js?1765086637"></script>
+    <script src="/Proposal_Strangers/js/clipboard.min.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/perfect-scrollbar.min.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/perfect-scrollbar.jquery.min.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/jquery.sticky.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/featherlight.min.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/highlight.pack.js?1765086832"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/Proposal_Strangers/js/modernizr.custom-3.6.0.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/learn.js?1765086637"></script>
-    <script src="/Proposal_Strangers/js/hugo-learn.js?1765086637"></script>
+    <script src="/Proposal_Strangers/js/modernizr.custom-3.6.0.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/learn.js?1765086832"></script>
+    <script src="/Proposal_Strangers/js/hugo-learn.js?1765086832"></script>
     
         
-            <script src="/Proposal_Strangers/mermaid/mermaid.js?1765086637"></script>
+            <script src="/Proposal_Strangers/mermaid/mermaid.js?1765086832"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

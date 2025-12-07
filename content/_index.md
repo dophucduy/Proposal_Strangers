@@ -7,6 +7,8 @@ draft: false
 
 ## 🐦 Proposal: Flyora – E-commerce Platform for Bird Lovers
 
+📄 **[Download Full Proposal PDF](/Proposal%20FLYORA.pdf)**
+
 ### 1. Executive Summary
 Flyora is a specialized web application designed to serve bird enthusiasts across Vietnam. It offers curated products such as bird food, toys, cages, and decorative accessories tailored to species like Chào Mào, Vẹt, Yến Phụng, and Chích Chòe. Built with modern web technologies and hosted on AWS, Flyora ensures scalability, performance, and secure access. The platform aims to become the go-to destination for bird care and ornamentation, combining e-commerce with personalization and community engagement.
 
@@ -33,15 +35,15 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 - **CloudFront**: CDN for global content delivery
 - **Responsive design**: Mobile-friendly interface
 
-
-
 #### 🔐 Authentication & Security
-- **Amazon Cognito**: User authentication and authorization
 - **IAM**: Identity and access management
-- **CloudWatch**: Monitoring and security layer
+- **CloudWatch & AWS X-Ray**: Monitoring and distributed tracing
 
 #### 🔄 Backend Services (App Tier)
-- **Amazon API Gateway**: HTTP API management
+#### Technical Improvements:
+- Responsive, mobile-friendly UI
+- Secure user authentication and role management (IAM)
+- Scalable backend with Lambda/API Gateway
 - **AWS Lambda Functions**: 
   - Chatbot handler
   - Import automation
@@ -69,7 +71,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 #### Month 1 - AWS Learning Focus:
 - **Week 1-2**: AWS fundamentals (S3, Lambda, API Gateway, DynamoDB)
-- **Week 3**: Advanced services (Cognito, Bedrock, OpenSearch)
+- **Week 3**: Advanced services (Bedrock, OpenSearch)
 - **Week 4**: Architecture design and database modeling with MySQL Workbench
 
 #### Technical Requirements:
@@ -108,6 +110,22 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 | AWS CodeBuild (Build Service)             | $2.52        | $30.24      |
 | Amazon VPC (Virtual Private Cloud)        | $43.07       | $516.84     |
 | **Total Estimate**                        | **$70.39**   | **$844.68** |
+| Item                        | Monthly Cost | Annual Cost |Detail Calculation|
+|-----------------------------|--------------|-------------|------------------|
+| Amazon S3                         | $0.15             | $1.8            | - Storage: 1GB                |
+| AWS Lambda                        | $0.00             | $0.00            | - 10.000 request<br>- 512 MB Ephemeral storage<br>- 256 MB Memory<br>- Duration: 150ms |
+| Amazon API Gateway (REST API)     | $0.04             | $0.48            | - 10.000 request              |
+| DynamoDB (on-demand capacity)     | $0.00             | $0.00            | - Data storage size: 0.01 GB<br>- Number of writes: 0.01 million<br>- Number of reads: 0.02 million |
+| X-ray                             | $0.01             | $0.12            | - 10.000 request<br>- Sampling rate: 10%<br>- Traces retrieved per query: 20 |
+| CloudWatch & Logs                 | $0.00             | $0.00            |                             |
+| Amazon Bedrock (Embedding/LLM)    | $3.49             | $41.88            | - Cohere Embed Multilingual (83%), Claude 3 Haiku (17%)<br>- 3.000 request |
+| Amazon RDS for PostgreSQL         | $21.01            | $252.12          | - db.t4g.micro<br>- Storage: 20GB |
+| Data transfer                     | $0.00             | $0.00            | - Free tier: 1 GB              |
+| CloudFront                        | $0.10             | $1.2            | - 10.000 request<br>- Data Transfer Out: Free tier 1 GB (global) |
+| CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
+| CodeBuild      | $2.52        | $30.24       |- arm1.2xlarge <br> - 14 builds in a month <br> - Average build duration: 2 minutes|
+| VPC                               | $43.07            | $516.84          | - Hourly Charge: 24h<br>- Data Processing: 3.000 request <br> - 1 Nat gateway |
+| **Total Estimate**          | **$70.39**    | **$844.68**  ||
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 
@@ -129,7 +147,7 @@ Hardware costs are not applicable as Flyora is a web-only platform.
 
 #### Technical Improvements:
 - Responsive, mobile-friendly, UI/UX
-- Secure user authentication and role management (Cognito, IAM)
+- Secure user authentication and role management (IAM)
 - Scalable backend with Lambda/API Gateway
 - Real-time product filtering and chatbot support
 - AI-powered features via Bedrock (Embedding/LLM)
