@@ -108,7 +108,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 | CloudFront                        | $0.10             | $1.2            | - 10.000 request<br>- Data Transfer Out: Free tier 1 GB (global) |
 | CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
 | CodeBuild      | $2.52        | $30.24       |- arm1.2xlarge <br> - 14 builds in a month <br> - Average build duration: 2 minutes|
-| VPC                               | $43.07            | $516.84          | - Hourly Charge: 24h<br>- Data Processing: 3.000 request |
+| VPC                               | $43.07            | $516.84          | - Hourly Charge: 24h<br>- Data Processing: 3.000 request <br> - 1 Nat gateway |
 | **Total Estimate**          | **$70.39**    | **$844.68**  ||
 
 Hardware costs are not applicable as Flyora is a web-only platform.
