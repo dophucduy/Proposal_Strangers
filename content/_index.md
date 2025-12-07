@@ -26,7 +26,7 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 3. Solution Architecture
 #### 📄 System Architecture Diagram
-![System Architecture Diagram](https://phucqb.sirv.com/Images/SystemArch.drawio.png)
+![System Architecture Diagram](https://phucqb.sirv.com/Images/4a27331b2b7fa421fd6e.jpg)
 
 #### 🧩 Frontend (Web Tier)
 - **Amazon S3**: Static web hosting for frontend assets
@@ -92,18 +92,22 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 6. Budget Estimation
 
-| Item                        | Monthly Cost | Annual Cost |
-|-----------------------------|--------------|-------------|
-| Amazon S3 + CloudFront      | $0.20        | $2.40       |
-| AWS Lambda                  | $0.00        | $0.00       |
-| Amazon API Gateway          | $0.01        | $0.12       |
-| DynamoDB                    | $0.25        | $3.00       |
-| Amazon Cognito              | $0.08        | $0.96       |
-| CloudWatch & Logs           | $0.05        | $0.60       |
-| Amazon Bedrock (Embedding/LLM)| $0.10      | $1.20       |
-| Amazon RDS for PostgreSQL   | $0.20        | $2.40       |
-| CodePipeline/CodeBuild      | $0.05        | $0.60       |
-| **Total Estimate**          | **$0.94**    | **$11.28**  |
+| Item                                     | Monthly Cost | Annual Cost |
+|------------------------------------------|--------------|-------------|
+| Amazon S3 (Simple Storage Service)       | $0.15        | $1.80       |
+| AWS Lambda (Serverless Compute)          | $0.00        | $0.00       |
+| Amazon API Gateway (REST API Endpoints)  | $0.04        | $0.48       |
+| DynamoDB (On-demand NoSQL Database)      | $0.00        | $0.00       |
+| AWS X-Ray (Application Monitoring)        | $0.01        | $0.12       |
+| Amazon CloudWatch (Monitoring & Logs)    | $0.00        | $0.00       |
+| Amazon Bedrock (AI/LLM Services)          | $3.49        | $41.88      |
+| Amazon RDS for PostgreSQL (Relational DB) | $21.01       | $252.12     |
+| AWS Data Transfer (Network Traffic)       | $0.00        | $0.00       |
+| Amazon CloudFront (CDN Service)          | $0.10        | $1.20       |
+| AWS CodePipeline (CI/CD Automation)      | $0.00        | $0.00       |
+| AWS CodeBuild (Build Service)             | $2.52        | $30.24      |
+| Amazon VPC (Virtual Private Cloud)        | $43.07       | $516.84     |
+| **Total Estimate**                        | **$70.39**   | **$844.68** |
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 
